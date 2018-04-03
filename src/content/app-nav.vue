@@ -10,7 +10,7 @@
     <b-navbar-nav>
       <b-nav-item to="/" class="px-3" value="/" exact>{{ $t('appBtn1') }} <i class="fas fa-home"></i></b-nav-item>
       <b-nav-item to="/about_me" class="px-3" exact>{{ $t('appBtn3') }} <i class="fas fa-street-view"></i></b-nav-item>
-      <b-nav-item to="/portfolio" class="px-3" exact>{{ $t('appBtn2') }} <i class="fas fa-briefcase"></i></b-nav-item>
+      <b-nav-item to="/portfolio" class="px-3" exact disabled>{{ $t('appBtn2') }} <i class="fas fa-briefcase"></i></b-nav-item>
     </b-navbar-nav>
 
     <b-navbar-nav class="ml-auto">

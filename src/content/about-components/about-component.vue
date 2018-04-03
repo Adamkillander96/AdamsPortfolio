@@ -9,7 +9,7 @@
     </gmap-map>
     <b-col sm="4" class="p-4">
       <ul class="nav justified tabPanelNav flex-row nav-pills nav-fill">
-        <li v-b-toggle.accordion1 class="nav-item p-4 adam-turkos-2">
+        <li v-b-toggle.accordion1 class="nav-item p-4 adam-red">
           <a class="nav-link nav-link text-white"><span>{{ $t('whoAmI') }}</span> <i class="fas fa-question fa-3x align-middle"></i></a>
         </li>
         <li v-b-toggle.accordion2 class="nav-item p-4 adam-orange">
@@ -24,7 +24,7 @@
     <b-col sm="8" class="p-4 tabPanelContent col-overlay">
       <b-collapse id="accordion1" visible accordion="my-accordion">
         <b-card-body class="p-0">
-          <h4 class="adam-turkos-text">{{ $t('whoAmI') }}</h4>
+          <h4 class="adam-red-text">{{ $t('whoAmI') }}</h4>
           <p class="card-text" v-html="$t('whoAmIDesc')"></p>
         </b-card-body>
       </b-collapse>
@@ -147,7 +147,12 @@ export default {
         <li>Burns to benefit and develop both people & products</li>
         <li>Interested in both web development and stylish design</li>
         <li>Like using the technology for utility to users</li>
-        <li>Create routines and manuals to simplify and enhance quality</li>`
+        <li>Create routines and manuals to simplify and enhance quality</li>`,
+        perferedJob: 'What do I want',
+        perferedJobDesc: `My dream is to become a great web developer with knowledge of everything about the subject. Not only today, but also tomorrow's latest technology & frameworks. I do not want to stay there either, I also seek knowledge of Backend system, market, product & function development.
+        <br><br>Becoming an expert in everything will be difficult, but basic knowledge & with the great focus on web development, I hope to build & design the coolest systems!
+        <br><br>I've been working on amazing companies in my years & it's hard to say what the perfect workplace is. As long as I develop myself, develop product & get the chance to work with something that creates value or difference for others, I'm home.<br><em>...a nice office is also nice!</em>`
+        
         },
       se: { 
         map: 'Karta',

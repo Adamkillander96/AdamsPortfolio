@@ -93,7 +93,7 @@ nav a.nav-link {
 .kartToggle     { z-index: 2; left: 50%; bottom: 0; }
 
 .vue-map-container            { color:black; overflow:hidden}
-.vue-map-container .vue-map   { filter: blur(2px); transform: scale(1.2); transition: 0.2s ease-in-out}
+.vue-map-container .vue-map   { filter: blur(2px) grayscale(1); transform: scale(1.2); transition: 0.2s ease-in-out}
 .vue-map-container .gmnoprint { display: none; }
 
 .vue-map-container.karta .vue-map   { filter: none; transform: scale(1) }
