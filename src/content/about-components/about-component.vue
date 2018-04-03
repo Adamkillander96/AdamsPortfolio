@@ -12,7 +12,7 @@
         <li v-b-toggle.accordion1 class="nav-item p-4 adam-red">
           <a class="nav-link nav-link text-white"><span>{{ $t('whoAmI') }}</span> <i class="fas fa-question fa-3x align-middle"></i></a>
         </li>
-        <li v-b-toggle.accordion2 class="nav-item p-4 adam-orange">
+        <li v-b-toggle.accordion2 class="nav-item p-4 adam-blue">
           <a class="nav-link nav-link text-white"><span>{{ $t('currentMe') }}</span> <i class="fas fa-wrench fa-3x align-middle"></i></a>
         </li>
         <li v-b-toggle.accordion3 class="nav-item p-4 adam-green">
@@ -30,7 +30,7 @@
       </b-collapse>
       <b-collapse id="accordion2" accordion="my-accordion">
         <b-card-body class="p-0">
-          <h4 class="adam-orange-text">{{ $t('currentMe') }}</h4>
+          <h4 class="adam-blue-text">{{ $t('currentMe') }}</h4>
           <p class="card-text" v-html="$t('currentMeDesc')"></p>
         </b-card-body>
       </b-collapse>
@@ -49,7 +49,7 @@
       </picture>
     </b-col>
     <b-col lg="6" class="p-4">
-      <h2>{{ $t('aboutMeTitle') }}</h2>
+      <h2 class="adam-orange-text">{{ $t('aboutMeTitle') }}</h2>
       <span>{{ $t('aboutMeDescr') }}</span>
       <ul class="p-4" v-html="$t('aboutMeComp')">
       </ul>

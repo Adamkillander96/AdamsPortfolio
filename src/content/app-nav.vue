@@ -15,8 +15,8 @@
 
     <b-navbar-nav class="ml-auto">
       <b-nav-item-dropdown id="nav7_ddown" v-bind:text="$t('lang')" extra-toggle-classes="nav-link-custom" class="px-3" right>
-        <b-dropdown-item @click="setLanguage('se'); setActive('se')" :class="{ active: isActive('se') }" id="Swedish" type="language" class="">Swedish <i class="far fa-flag"></i></b-dropdown-item>
-        <b-dropdown-item @click="setLanguage('en'); setActive('en')" :class="{ active: isActive('en') }" id="English" type="language" class="">English <i class="far fa-flag"></i></b-dropdown-item>
+        <b-dropdown-item @click="setLanguage('se'); setActive('se')" :class="{ active: isActive('se'), 'adam-green': isActive('se') }" id="Swedish" type="language" class="">Swedish <i class="far fa-flag"></i></b-dropdown-item>
+        <b-dropdown-item @click="setLanguage('en'); setActive('en')" :class="{ active: isActive('en'), 'adam-green': isActive('en') }" id="English" type="language" class="">English <i class="far fa-flag"></i></b-dropdown-item>
       </b-nav-item-dropdown>
     </b-navbar-nav>
     

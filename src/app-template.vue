@@ -26,7 +26,7 @@ export default {
 
 <style>
 .background-adam { 
-    background-image: linear-gradient(-225deg, #22E1FF 0%, #1D8FE1 48%, #625EB1 100%);
+    background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
 }
 
 a.router-link-active, 
@@ -38,7 +38,7 @@ body { font-family: 'Raleway', sans-serif; color: white; }
 .adam-blue       { background-color: #6294cf !important }
 .adam-blue-text  { color: #6294cf !important }
 .adam-purple     { background-color: #6f42c1 !important }
-.adam-blue-text  { color: #6f42c1 !important }
+.adam-purple-text{ color: #6f42c1 !important }
 .adam-red        { background-color: #cf6262 !important }
 .adam-red-text   { color: #cf6262 !important }
 .adam-orange     { background-color: #cfa762 !important }
@@ -49,6 +49,12 @@ body { font-family: 'Raleway', sans-serif; color: white; }
 .adam-turkos-2   { background-color: #4e9aa6 !important; }
 .adam-turkos-text{ color: #62c1cf !important }
 
+.dropdown-item:active {
+    background-color: #253b4c;
+}
+.dropdown-menu.dropdown-menu-right > a {
+    outline: none !important;
+}
 .component-fade-enter-active, .component-fade-leave-active { transition: opacity .2s ease-in-out; }
 .component-fade-enter, .component-fade-leave-to { opacity: 0; }
 
