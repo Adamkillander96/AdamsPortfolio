@@ -39,5 +39,15 @@
     "vue-template-compiler": "^2.5.3",
     "webpack": "^3.11.0",
     "webpack-dev-server": "^2.9.4"
+  },
+  "main": "customvue.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Adamkillander96/AdamsPortfolio.git"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Adamkillander96/AdamsPortfolio/issues"
   }
 }
