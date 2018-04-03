@@ -1,5 +1,6 @@
 var path = require('path')
 var webpack = require('webpack')
+var ghpages = require('gh-pages');
 const ExtractTextPlugin = require("extract-text-webpack-plugin")
 
 module.exports = {
@@ -7,7 +8,10 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',
-    filename: 'build.js'
+    filename: 'build.js',
+    assetsPublicPath: './',
+    index: path.resolve(__dirname, '../docs/index.html'),
+    assetsRoot: path.resolve(__dirname, '../docs'),
   },
   module: {
     rules: [
