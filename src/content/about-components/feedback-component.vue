@@ -17,15 +17,6 @@
 
 </template>
 
-<style>
-circle {
-  transition: 2s
-}
-
-
-</style>
-
-
 <script>
 
 export default {
