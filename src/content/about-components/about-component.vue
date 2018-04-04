@@ -1,13 +1,8 @@
 <template>
 
 <b-container fluid id="about-me">
-  <b-row class="position-relative">
-    <button type="button" id="kartToggleBack" @click="revert" value="show" v-bind:class="{ kartaReverse: display }" class="btn btn-outline-dark position-absolute m-1">{{ $t('map') }}</button>
-    <gmap-map v-bind:class="{ karta: display }" :center="center" :zoom="6" style="width: 100%; height: 100%; position:absolute;">
-      <gmap-info-window :options="infoOptions" :position="infoWindowPos" :opened="infoWinOpen" @closeclick="infoWinOpen=false">{{infoContent}}</gmap-info-window>
-      <gmap-marker :key="i" v-for="(m, i) in markers" :position="m.position" :clickable="true" @click="toggleInfoWindow(m,i)"></gmap-marker>
-    </gmap-map>
-    <b-col sm="4" class="p-4">
+  <b-row class="position-relative col-overlay">
+    <b-col sm="4" class="p-0">
       <ul class="nav justified tabPanelNav flex-row nav-pills nav-fill">
         <li v-b-toggle.accordion1 class="nav-item p-4 adam-red">
           <a class="nav-link nav-link text-white"><span>{{ $t('whoAmI') }}</span> <i class="fas fa-question fa-3x align-middle"></i></a>
@@ -19,23 +14,22 @@
           <a class="nav-link nav-link text-white"><span>{{ $t('perferedJob') }}</span> <i class="fas fa-trophy fa-3x align-middle"></i></a>
         </li>
       </ul>
-      <button type="button" id="kartToggle" @click="revert" value="show" class="btn btn-outline-dark kartToggle m-1">{{ $t('map') }}</button>
     </b-col>
-    <b-col sm="8" class="p-4 tabPanelContent col-overlay">
+    <b-col sm="8" class="p-0 tabPanelContent">
       <b-collapse id="accordion1" visible accordion="my-accordion">
-        <b-card-body class="p-0">
+        <b-card-body class="p-4">
           <h4 class="adam-red-text">{{ $t('whoAmI') }}</h4>
           <p class="card-text" v-html="$t('whoAmIDesc')"></p>
         </b-card-body>
       </b-collapse>
       <b-collapse id="accordion2" accordion="my-accordion">
-        <b-card-body class="p-0">
+        <b-card-body class="p-4">
           <h4 class="adam-blue-text">{{ $t('currentMe') }}</h4>
           <p class="card-text" v-html="$t('currentMeDesc')"></p>
         </b-card-body>
       </b-collapse>
       <b-collapse id="accordion3" accordion="my-accordion">
-        <b-card-body class="p-0">
+        <b-card-body class="p-4">
           <h4 class="adam-green-text">{{ $t('perferedJob') }}</h4>
           <p class="card-text" v-html="$t('perferedJobDesc')"></p>
         </b-card-body>
@@ -44,9 +38,7 @@
   </b-row>
   <b-row class="bg pb-4">
     <b-col lg="6" class="p-4">
-      <picture>
-        <img class="d-block mx-auto rounded-circle" src="./bild.jpg">
-      </picture>
+      <picture><img class="d-block mx-auto rounded-circle" src="./bild.jpg"></picture>
     </b-col>
     <b-col lg="6" class="p-4">
       <h2 class="adam-orange-text">{{ $t('aboutMeTitle') }}</h2>
@@ -55,78 +47,24 @@
       </ul>
     </b-col>
   </b-row>
+  <mapComponent></mapComponent>
+
 
 </b-container>
 
 </template>
 
 <script>
+import mapComponent from './map-component.vue'
 
 export default {
   name: 'about-me',
   components: {
+    mapComponent
   },
-  data: function () {
-      return {
-        center: {
-          lat: 58.466436, 
-          lng: 14.841014
-        },
-        infoContent: '',
-          infoWindowPos: {
-            lat: 0,
-            lng: 0
-          },
-          infoWinOpen: false,
-          currentMidx: null,
-          infoOptions: {
-            pixelOffset: {
-              width: 0,
-              height: -35
-            }
-          },
-        markers: [{
-          position: { 
-            lat: 59.863529,
-            lng: 17.638544 
-          },
-          infoText: 'Uppsala',
-          }, {
-          position: { 
-            lat: 56.686068,
-            lng: 12.858931
-          },
-          infoText: 'Halmstad', 
-        }],
-        internalValue: '',
-        display: false,
-      }
-    },
-    methods: {
-          revert: function(){
-            this.display = !this.display;
-          },
-          toggleInfoWindow: function(marker, idx) {
-
-            this.infoWindowPos = marker.position;
-            this.infoContent = marker.infoText;
-
-            //check if its the same marker that was selected if yes toggle
-            if (this.currentMidx == idx) {
-              this.infoWinOpen = !this.infoWinOpen;
-            }
-            //if different marker set infowindow to open and reset current marker index
-            else {
-              this.infoWinOpen = true;
-              this.currentMidx = idx;
-
-            }
-          }
-        },
   i18n: {
     messages: {
       en: { 
-        map: 'Map',
         aboutMeTitle: 'With the user in focus',
         aboutMeDescr: 'For many years I have been working with graphic design and creating user-friendly products in a variety of ways. Below I list the skills and skills I have with me as a result of my work:',
         currentMe: 'My work today',
@@ -155,7 +93,6 @@ export default {
         
         },
       se: { 
-        map: 'Karta',
         aboutMeTitle: 'Med användaren i fokus',
         aboutMeDescr: 'Jag har under många år jobbat med grafisk design och att skapa användarvänliga produkter på en mängd olika sätt. Nedan listar jag de kompetenser och färdigheter jag har med mig som ett resultat av mitt arbete:',
         currentMe: 'Mina arbetsuppgifter idag',

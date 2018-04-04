@@ -90,20 +90,8 @@ nav a.nav-link {
 }
 
 .col-overlay {
-    background: rgba(52, 58, 64, 0.85);
+    background: rgba(52, 58, 64, 0.5);
 }
-
-.karta          { z-index: 1; }
-#kartToggleBack { visibility: hidden; }
-#kartToggleBack.kartaReverse { z-index: 2; top: 50%; visibility: visible; }
-.kartToggle     { z-index: 2; left: 50%; bottom: 0; }
-
-.vue-map-container            { color:black; overflow:hidden}
-.vue-map-container .vue-map   { filter: blur(2px) grayscale(1); transform: scale(1.2); transition: 0.2s ease-in-out}
-.vue-map-container .gmnoprint { display: none; }
-
-.vue-map-container.karta .vue-map   { filter: none; transform: scale(1) }
-.vue-map-container.karta .gmnoprint { display: block; }
 
 picture > img { 
     width: 100%;
@@ -116,6 +104,9 @@ picture > img {
 }
 .tabPanelNav li[aria-expanded="false"] { background-color: transparent !important; cursor: pointer; }
 .tabPanelNav li[aria-expanded="true"]  { pointer-events: none; }
+
+.tabPanelContent > *[id*=accordion]              { height: 100%;    }
+.tabPanelContent > *[id*=accordion] > .card-body { height: inherit; }
 
 @media (max-width: 1100px) { .tabPanelNav span   { display:none; } }
 @media (max-width: 1100px) { .tabPanelNav li a   { text-align: center; } }
