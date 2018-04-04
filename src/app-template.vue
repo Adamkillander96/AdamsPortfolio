@@ -55,6 +55,7 @@ body { font-family: 'Raleway', sans-serif; color: white; }
 .dropdown-menu.dropdown-menu-right > a {
     outline: none !important;
 }
+
 .component-fade-enter-active, .component-fade-leave-active { transition: opacity .2s ease-in-out; }
 .component-fade-enter, .component-fade-leave-to { opacity: 0; }
 

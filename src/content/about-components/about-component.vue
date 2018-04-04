@@ -48,7 +48,7 @@
     </b-col>
   </b-row>
   <mapComponent></mapComponent>
-
+  <feedbackComponent></feedbackComponent>
 
 </b-container>
 
@@ -56,11 +56,14 @@
 
 <script>
 import mapComponent from './map-component.vue'
+import feedbackComponent from './feedback-component.vue'
+
 
 export default {
   name: 'about-me',
   components: {
-    mapComponent
+    mapComponent,
+    feedbackComponent
   },
   i18n: {
     messages: {

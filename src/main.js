@@ -56,9 +56,9 @@ const messages = {
     appName: 'Adams Portfolio',
     lang: 'Language',
     
-    appBtn1: 'Home',
-    appBtn2: 'Portfolio',
-    appBtn3: 'About me',
+    home: 'Home',
+    portfolio: 'Portfolio',
+    aboutme: 'About me',
 
     today: 'today',
     since: 'since',
@@ -78,9 +78,9 @@ const messages = {
     appName: 'Adams Portfolio',
     lang: 'Språk',
     
-    appBtn1: 'Hem',
-    appBtn2: 'Portfolio',
-    appBtn3: 'Om mig',
+    home: 'Hem',
+    portfolio: 'Portfolio',
+    aboutme: 'Om mig',
 
     today: 'idag',
     since: 'sedan',

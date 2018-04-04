@@ -1,6 +1,6 @@
 <template>
 
-<div id="app-body">
+<div id="app-body" class="bodyComponent">
 
   <b-container fluid class="p-5">
     <b-row class="p-5">
