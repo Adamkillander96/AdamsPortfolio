@@ -1,5 +1,5 @@
 <template>
-<div id="app-content" class="background-adam ">
+<div id="app-content">
   
 <appNav></appNav>
 <appBody></appBody>

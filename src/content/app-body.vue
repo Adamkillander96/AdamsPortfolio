@@ -1,7 +1,6 @@
 <template>
 
 <div id="app-body" class="bodyComponent">
-
   <b-container fluid class="p-5">
     <b-row class="p-5">
       <b-col lg="6" class="text-right">
@@ -13,12 +12,9 @@
       </b-col>
     </b-row>
   </b-container>
-
- <transition name="component-fade" mode="out-in">
-   <router-view></router-view>
- </transition>
-
-
+  <transition name="component-fade" mode="out-in">
+    <router-view></router-view>
+  </transition>
 </div>
 </template>
 
