@@ -41,7 +41,7 @@
       <picture><img class="d-block mx-auto rounded-circle" src="./bild.jpg"></picture>
     </b-col>
     <b-col lg="6" class="p-4">
-      <h2 class="adam-orange-text">{{ $t('aboutMeTitle') }}</h2>
+      <h2 class="adam-turkos-text">{{ $t('aboutMeTitle') }} <i class="fab fa-sistrix"></i></h2>
       <span>{{ $t('aboutMeDescr') }}</span>
       <ul class="p-4" v-html="$t('aboutMeComp')">
       </ul>
@@ -69,29 +69,29 @@ export default {
     messages: {
       en: { 
         aboutMeTitle: 'With the user in focus',
-        aboutMeDescr: 'For many years I have been working with graphic design and creating user-friendly products in a variety of ways. Below I list the skills and skills I have with me as a result of my work:',
+        aboutMeDescr: 'For many years I have been working with graphic design & creating user-friendly products in a variety of ways. Below I list the skills & competences I have with me as a result of my work:',
         currentMe: 'My work today',
-        currentMeDesc: `I work at Quicksearch Development Department, on the Design Unit. Primarily responsible I for graphic design and ease of use in our customer portals. For example, mean that Customize the appearance of the customers graphical profile and build features, primarily with CSS, HTML and JavaScript but also internal system features. I also design dynamic reports to portals.
+        currentMeDesc: `I work at Quicksearch Development Department, on the Design Unit. Primarily responsible I for graphic design & ease of use in our customer portals. For example, mean that Customize the appearance of the customers graphical profile & build features, primarily with CSS, HTML & JavaScript but also internal system features. I also design dynamic reports to portals.
         <br><br>
-        In our larger projects, we work in teams where I am the link between technology and the customer. I also conduct a few smaller projects where I handle everything from customer contact, data processing and processing of results and graphic design.
+        In our larger projects, we work in teams where I am the link between technology & the customer. I also conduct a few smaller projects where I handle everything from customer contact, data processing & processing of results & graphic design.
         <br><br>
-        In parallel with design and development, I take care of our First-line support. This means being support for both our customers and our own employees.`,
+        In parallel with design & development, I take care of our First-line support. This means being support for both our customers & our own employees.`,
         whoAmI: 'Who am I',
-        whoAmIDesc: `I am passionate about development, love new features and nice code. I am careful and structured with detail focus but also know when something is "good enough" and is good at meeting deadlines. I have easy to switch between social and sharp mode and like to transform design ideas into reality with the user in focus
+        whoAmIDesc: `I am passionate about development, love new features & nice code. I am careful & structured with detail focus but also know when something is "good enough" & is good at meeting deadlines. I have easy to switch between social & sharp mode & like to transform design ideas into reality with the user in focus
         <br><br>
-        In my spare time, I would like to relax by watching movies or exercising (but I do not like it). I love music and play drums. Also working with my Youtube channel and playing strategy games with my partner.`,
+        In my spare time, I would like to relax by watching movies or exercising (but I do not like it). I love music & play drums. Also working with my Youtube channel & playing strategy games with my partner.`,
         aboutMeComp: `
         <li>Can translate customer requests into digital solutions</li>
         <li>Awesome eye for graphic design & layout</li>
         <li>Nerdly interested in UX & creating good customer experience</li>
         <li>Educational & logical - good at explaining so you understand</li>
-        <li>Burns to benefit and develop both people & products</li>
-        <li>Interested in both web development and stylish design</li>
+        <li>Burns to benefit & develop both people & products</li>
+        <li>Interested in both web development & stylish design</li>
         <li>Like using the technology for utility to users</li>
-        <li>Create routines and manuals to simplify and enhance quality</li>`,
+        <li>Create routines & manuals to simplify & enhance quality</li>`,
         perferedJob: 'What do I want',
         perferedJobDesc: `My dream is to become a great web developer with knowledge of everything about the subject. Not only today, but also tomorrow's latest technology & frameworks. I do not want to stay there either, I also seek knowledge of Backend system, market, product & function development.
-        <br><br>Becoming an expert in everything will be difficult, but basic knowledge & with the great focus on web development, I hope to build & design the coolest systems!
+        <br><br>Becoming an expert in everything will be difficult, but basic knowledge & with a great focus on web development, I hope to build & design the coolest systems!
         <br><br>I've been working on amazing companies in my years & it's hard to say what the perfect workplace is. As long as I develop myself, develop product & get the chance to work with something that creates value or difference for others, I'm home.<br><em>...a nice office is also nice!</em>`
         
         },

@@ -9,7 +9,7 @@
         <p class="lead">{{ $t('appDescr') }}</p>
       </b-col>
       <b-col lg="6">
-    
+        <i class="fas fa-desktop fa-5x"></i>
       </b-col>
     </b-row>
   </b-container>

@@ -38,7 +38,7 @@ export default {
             lat: 59.863529,
             lng: 17.638544 
           },
-          infoText: 'Uppsala',
+          infoText: this.$i18n.t('workPlace'),
           }, {
           position: { 
             lat: 56.686068,
@@ -80,10 +80,12 @@ export default {
       en: { 
         map: 'Map',
         homeTown: 'I was born & raised in Halmstad',
+        workPlace: 'I live & work in Uppsala',
         },
       se: { 
         map: 'Karta',
         homeTown: 'Jag är född & uppvuxen i Halmstad',
+        workPlace: 'Jag bor & arbetar i Uppsala',
       }
     }
   }

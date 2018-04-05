@@ -59,7 +59,7 @@ body { font-family: 'Raleway', sans-serif; color: white; }
 .component-fade-enter-active, .component-fade-leave-active { transition: opacity .2s ease-in-out; }
 .component-fade-enter, .component-fade-leave-to { opacity: 0; }
 
-svg { transition: 0.1s ease-in-out }
+.col-lg-4 svg { transition: 0.1s ease-in-out }
 
 .p-0.col-lg-4:hover > div > div > svg {
     transform: scale(0.95);
@@ -91,7 +91,7 @@ nav a.nav-link {
 }
 
 .col-overlay {
-    background: rgba(52, 58, 64, 0.5);
+    background: rgba(52, 58, 64, 0.25);
 }
 
 picture > img { 
@@ -101,13 +101,20 @@ picture > img {
     max-height: 350px;
 }
 .tabPanelNav {
-    background: rgba(0, 0, 0, 0.25);
+    background: rgba(0, 0, 0, 0.05);
 }
 .tabPanelNav li[aria-expanded="false"] { background-color: transparent !important; cursor: pointer; }
 .tabPanelNav li[aria-expanded="true"]  { pointer-events: none; }
 
 .tabPanelContent > *[id*=accordion]              { height: 100%;    }
 .tabPanelContent > *[id*=accordion] > .card-body { height: inherit; }
+
+#npsvalue {
+    top: 0;
+    left: 0;
+    line-height: 300px;
+    font-size: 2.5rem;
+}
 
 @media (max-width: 1100px) { .tabPanelNav span   { display:none; } }
 @media (max-width: 1100px) { .tabPanelNav li a   { text-align: center; } }
