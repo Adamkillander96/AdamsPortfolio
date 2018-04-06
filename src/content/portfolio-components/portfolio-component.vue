@@ -5,7 +5,7 @@
   <b-row>
     <b-col lg=6 class="p-4 bg-dark"><div></div></b-col>
     <b-col lg=6 class="p-4">
-      <h5>Intro to me</h5>
+      <h5>text</h5>
       <p lead></p>
     </b-col>
   </b-row>

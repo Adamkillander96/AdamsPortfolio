@@ -4,11 +4,6 @@
     <b-row>
         <b-col class="p-3 text-center">
           <h6 class="mb-1">{{ $t('appFotTitle') }}</h6>
-          <b-button-group vertical>
-            <b-button variant="dark" to="/" class="px-3" value="/" exact>{{ $t('appBtn1') }}</b-button>
-            <b-button variant="dark" to="/about_me" class="px-3" exact>{{ $t('appBtn3') }}</b-button>
-            <b-button variant="dark" to="/portfolio" class="px-3" exact>{{ $t('appBtn2') }}</b-button>
-          </b-button-group>
         </b-col>
         <b-col class="p-3 text-center">
           <h6 class="mb-1">{{ $t('appFotTitle') }}</h6>

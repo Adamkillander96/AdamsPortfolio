@@ -26,7 +26,7 @@ export default {
 
 <style>
 .background-adam { 
-    background-image: linear-gradient(-225deg, #22E1FF 0%, #1D8FE1 48%, #625EB1 100%);
+    background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
 }
 
 a.router-link-active, 
@@ -38,7 +38,7 @@ body { font-family: 'Raleway', sans-serif; color: white; }
 .adam-blue       { background-color: #6294cf !important }
 .adam-blue-text  { color: #6294cf !important }
 .adam-purple     { background-color: #6f42c1 !important }
-.adam-blue-text  { color: #6f42c1 !important }
+.adam-purple-text{ color: #6f42c1 !important }
 .adam-red        { background-color: #cf6262 !important }
 .adam-red-text   { color: #cf6262 !important }
 .adam-orange     { background-color: #cfa762 !important }
@@ -49,10 +49,17 @@ body { font-family: 'Raleway', sans-serif; color: white; }
 .adam-turkos-2   { background-color: #4e9aa6 !important; }
 .adam-turkos-text{ color: #62c1cf !important }
 
+.dropdown-item:active {
+    background-color: #253b4c;
+}
+.dropdown-menu.dropdown-menu-right > a {
+    outline: none !important;
+}
+
 .component-fade-enter-active, .component-fade-leave-active { transition: opacity .2s ease-in-out; }
 .component-fade-enter, .component-fade-leave-to { opacity: 0; }
 
-svg { transition: 0.1s ease-in-out }
+.col-lg-4 svg { transition: 0.1s ease-in-out }
 
 .p-0.col-lg-4:hover > div > div > svg {
     transform: scale(0.95);
@@ -84,20 +91,8 @@ nav a.nav-link {
 }
 
 .col-overlay {
-    background: rgba(52, 58, 64, 0.85);
+    background: rgba(52, 58, 64, 0.25);
 }
-
-.karta          { z-index: 1; }
-#kartToggleBack { visibility: hidden; }
-#kartToggleBack.kartaReverse { z-index: 2; top: 50%; visibility: visible; }
-.kartToggle     { z-index: 2; left: 50%; bottom: 0; }
-
-.vue-map-container            { color:black; overflow:hidden}
-.vue-map-container .vue-map   { filter: blur(2px) grayscale(1); transform: scale(1.2); transition: 0.2s ease-in-out}
-.vue-map-container .gmnoprint { display: none; }
-
-.vue-map-container.karta .vue-map   { filter: none; transform: scale(1) }
-.vue-map-container.karta .gmnoprint { display: block; }
 
 picture > img { 
     width: 100%;
@@ -106,10 +101,20 @@ picture > img {
     max-height: 350px;
 }
 .tabPanelNav {
-    background: rgba(0, 0, 0, 0.25);
+    background: rgba(0, 0, 0, 0.05);
 }
 .tabPanelNav li[aria-expanded="false"] { background-color: transparent !important; cursor: pointer; }
 .tabPanelNav li[aria-expanded="true"]  { pointer-events: none; }
+
+.tabPanelContent > *[id*=accordion]              { height: 100%;    }
+.tabPanelContent > *[id*=accordion] > .card-body { height: inherit; }
+
+#npsvalue {
+    top: 0;
+    left: 0;
+    line-height: 300px;
+    font-size: 2.5rem;
+}
 
 @media (max-width: 1100px) { .tabPanelNav span   { display:none; } }
 @media (max-width: 1100px) { .tabPanelNav li a   { text-align: center; } }

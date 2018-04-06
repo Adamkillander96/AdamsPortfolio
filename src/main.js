@@ -22,12 +22,24 @@ import template from './app-template.vue'
 import skill from './content/adam-components/skill-component.vue'
 import about from './content/about-components/about-component.vue'
 import portfolio from './content/portfolio-components/portfolio-component.vue'
+import SkillSEODetails from './content/adam-components/qua-components/skill-component-seo-details.vue'
+import SkillWebDetails from './content/adam-components/qua-components/skill-component-web-details.vue'
 
 const routes = [
   { path: '/', 
     name: 'Home', 
     meta: { title: 'Home' }, 
-    component: skill 
+    component: skill,
+    children: [{ 
+      path: 'SEO', 
+      component: SkillSEODetails,
+      meta: { title: 'SEO Specialist' }, 
+    },
+    { 
+      path: 'Web', 
+      component: SkillWebDetails,
+      meta: { title: 'Web developer' }, 
+    }]
   },
   { path: '/about_me', 
     name: 'About me', 
@@ -56,9 +68,9 @@ const messages = {
     appName: 'Adams Portfolio',
     lang: 'Language',
     
-    appBtn1: 'Home',
-    appBtn2: 'Portfolio',
-    appBtn3: 'About me',
+    home: 'Home',
+    portfolio: 'Portfolio',
+    aboutme: 'About me',
 
     today: 'today',
     since: 'since',
@@ -78,9 +90,9 @@ const messages = {
     appName: 'Adams Portfolio',
     lang: 'Språk',
     
-    appBtn1: 'Hem',
-    appBtn2: 'Portfolio',
-    appBtn3: 'Om mig',
+    home: 'Hem',
+    portfolio: 'Portfolio',
+    aboutme: 'Om mig',
 
     today: 'idag',
     since: 'sedan',

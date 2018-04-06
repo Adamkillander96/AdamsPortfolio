@@ -1,6 +1,6 @@
 <template>
 
-<div id="app-body">
+<div id="app-body" class="bodyComponent">
 
   <b-container fluid class="p-5">
     <b-row class="p-5">
@@ -9,7 +9,7 @@
         <p class="lead">{{ $t('appDescr') }}</p>
       </b-col>
       <b-col lg="6">
-    
+        <i class="fas fa-desktop fa-5x"></i>
       </b-col>
     </b-row>
   </b-container>
