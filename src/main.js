@@ -22,25 +22,13 @@ import template from './app-template.vue'
 import skill from './content/adam-components/skill-component.vue'
 import about from './content/about-components/about-component.vue'
 import portfolio from './content/portfolio-components/portfolio-component.vue'
-import SkillSEODetails from './content/adam-components/qua-components/skill-component-seo-details.vue'
-import SkillWebDetails from './content/adam-components/qua-components/skill-component-web-details.vue'
 
 const routes = [
   { path: '/', 
     name: 'Home', 
     meta: { title: 'Home' }, 
     component: skill,
-    children: [{ 
-      path: 'SEO', 
-      component: SkillSEODetails,
-      meta: { title: 'SEO Specialist' }, 
     },
-    { 
-      path: 'Web', 
-      component: SkillWebDetails,
-      meta: { title: 'Web developer' }, 
-    }]
-  },
   { path: '/about_me', 
     name: 'About me', 
     meta: { title: 'About Adam' },
@@ -85,6 +73,7 @@ const messages = {
     
     skillSupportTitle: 'First-line Support',
     skillSupportDescr: 'Nice support both internally and externally',
+    skillSupportText: 'Text',
   },
   se: {
     appName: 'Adams Portfolio',
@@ -107,6 +96,7 @@ const messages = {
     
     skillSupportTitle: 'First-line Support',
     skillSupportDescr: 'Trevligt stöd både internt & externt',
+    skillSupportText: 'Text',
   }
 }
 
