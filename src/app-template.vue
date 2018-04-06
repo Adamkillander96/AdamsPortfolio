@@ -25,15 +25,16 @@ export default {
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+body { font-family: 'Raleway', sans-serif; color: white; }
+
+
 .background-adam { 
     background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
 }
 
 a.router-link-active, 
 a.active { pointer-events: none; }
-
-@import url('https://fonts.googleapis.com/css?family=Raleway');
-body { font-family: 'Raleway', sans-serif; color: white; }
 
 .adam-blue       { background-color: #6294cf !important }
 .adam-blue-text  { color: #6294cf !important }
