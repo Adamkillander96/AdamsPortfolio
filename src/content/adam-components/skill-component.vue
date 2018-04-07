@@ -3,7 +3,7 @@
 <b-container fluid id="skillcomponent">
   <b-row class="bg-coding">
     <b-col lg="4" class="p-0">
-      <b-link class="transparent-btn px-3 w-100 h-100 border-0 bg-transparent" v-b-modal.skillModal v-on:click="isActive = true" exact></b-link>
+      <b-link class="transparent-btn px-3 w-100 h-100 border-0 bg-transparent" v-b-modal.skillModal exact></b-link>
       <SkillSEO></SkillSEO>
     </b-col>
     <b-col lg="4" class="p-0">
@@ -16,10 +16,18 @@
     </b-col>
   </b-row>
   <transition name="component-fade" mode="out-in">
-    <b-modal ref="thymodal" id="skillModal" centered hide-header hide-footer>
-      <SkillSEODetails v-if="isActive"></SkillSEODetails>
-      <SkillWebDetails></SkillWebDetails>
-      <SkillSupportDetails></SkillSupportDetails>
+    <b-modal ref="thymodal" id="skillModal" body-class="p-0" class="p-0" centered hide-header hide-footer>
+      <b-tabs nav-class="nav-fill" pills>
+        <b-tab title-link-class="adam-green-text" title="first" active>
+          <SkillSEODetails></SkillSEODetails>
+        </b-tab>
+        <b-tab active-class="adam-red" title-link-class="adam-red-text" title="second">
+          <SkillWebDetails></SkillWebDetails>
+        </b-tab>
+        <b-tab title-link-class="adam-blue-text" title="disabled">
+          <SkillSupportDetails></SkillSupportDetails>
+        </b-tab>
+      </b-tabs>
       <b-btn class="border-0" @click="hideModal" exact>Close</b-btn>
     </b-modal>
   </transition>
@@ -27,10 +35,6 @@
 </b-container>
 
 </template>
-
-<style>
-h5.modal-title {color:black;}
-</style>
 
 <script>
 
@@ -45,19 +49,6 @@ import SkillSupportDetails from './qua-components/skill-component-support-detail
 
 export default {
   name: 'skill-overview',
-  data() {
-    return {
-      display: true,
-    }
-  },
-  computed:{
-  	active(){
-    	return this._uid == this.$root.active
-    }
-  },
-  created(){
-  	addEventListener('click', ()=> this.active = false)
-  },
   components: {
       GridComponent,
       SkillSEO,
