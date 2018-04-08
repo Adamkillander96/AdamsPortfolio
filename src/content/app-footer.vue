@@ -3,10 +3,15 @@
 <b-container fluid id="app-footer" class="bg-dark">
     <b-row>
         <b-col class="p-3 text-center">
-          <h6 class="mb-1">{{ $t('appFotTitle') }}</h6>
+          <h6 class="mb-1">{{ $t('linkInternal') }}</h6>
+          <b-button-group vertical>
+            <b-button variant="dark" class="rounded-0" to="/" value="/" exact>{{ $t('home') }} <i class="fas fa-home"></i></b-button>
+            <b-button variant="dark" class="rounded-0" to="/about_me" exact>{{ $t('aboutme') }} <i class="fas fa-street-view"></i></b-button>
+            <b-button variant="dark" class="rounded-0" to="/portfolio" exact>{{ $t('portfolio') }} <i class="fas fa-briefcase"></i></b-button>
+          </b-button-group>
         </b-col>
         <b-col class="p-3 text-center">
-          <h6 class="mb-1">{{ $t('appFotTitle') }}</h6>
+          <h6 class="mb-1">{{ $t('linkExternal') }}</h6>
           <b-button-group vertical>
             <b-button variant="dark" class="rounded-0" target="_blank" href="https://www.linkedin.com/in/adam-killander-a91aa0103/">Linkedin <i class="fab fa-linkedin"></i></b-button>
             <b-button variant="dark" class="rounded-0" target="_blank" href="https://github.com/Adamkillander96?tab=repositories">Github <i class="fab fa-github-square"></i></b-button>
@@ -25,10 +30,12 @@ export default {
   i18n: {
     messages: {
       en: { 
-        appFotTitle: 'Links', 
+        linkInternal: 'Internal links',
+        linkExternal: 'External links', 
       },
       se: { 
-        appFotTitle: 'Länkar',
+        linkInternal: 'Interna länkar',
+        linkExternal: 'Externa länkar',
       }
     }
   }

@@ -56,14 +56,11 @@
 
 <script>
 import mapComponent from './map-component.vue'
-import feedbackComponent from './feedback-component.vue'
-
 
 export default {
   name: 'about-me',
   components: {
     mapComponent,
-    feedbackComponent
   },
   i18n: {
     messages: {
