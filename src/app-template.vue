@@ -31,14 +31,17 @@ body { font-family: 'Raleway', sans-serif; color: white; }
 .background-adam {  background-image: linear-gradient(to right, #243949 0%, #517fa4 100%); }
 
 .adam-blue       { background-color: #6294cf !important }
+.adam-blue-2nd   { background-color: #89afdc !important }
 .adam-blue-text  { color: #6294cf !important }
 .adam-purple     { background-color: #6f42c1 !important }
 .adam-purple-text{ color: #6f42c1 !important }
 .adam-red        { background-color: #cf6262 !important }
+.adam-red-2nd    { background-color: #db8989 !important }
 .adam-red-text   { color: #cf6262 !important }
 .adam-orange     { background-color: #cfa762 !important }
 .adam-orange-text{ color: #cfa762 !important }
 .adam-green      { background-color: #79ce62 !important }
+.adam-green-2nd  { background-color: #9ada8a !important }
 .adam-green-text { color: #79ce62 !important }
 .adam-turkos     { background-color: #62c1cf !important }
 .adam-turkos-2   { background-color: #4e9aa6 !important; }
