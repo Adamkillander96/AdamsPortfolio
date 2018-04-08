@@ -9,8 +9,8 @@
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
     "deploy": "node ./node_modules/vue-gh-pages/index.js"
   },
-  "wst": "/dist/",
   "homepage": "https://github.com/adamkillander96/AdamsPortfolio",
+  "wst": "/dist/",
   "dependencies": {
     "bootstrap": "^4.0.0-beta.2",
     "bootstrap-vue": "^1.2.0",

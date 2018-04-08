@@ -19,15 +19,15 @@ Vue.use(VueGoogleMaps, {
 
 import template from './app-template.vue'
 
-import skill from './content/adam-components/skill-component.vue'
+import home from './content/adam-components/skill-component.vue'
 import about from './content/about-components/about-component.vue'
 import portfolio from './content/portfolio-components/portfolio-component.vue'
 
 const routes = [
   { path: '/', 
     name: 'Home', 
-    meta: { title: 'Home' }, 
-    component: skill,
+    meta: { title: 'Adams Portfolio' }, 
+    component: home,
     },
   { path: '/about_me', 
     name: 'About me', 
@@ -36,7 +36,7 @@ const routes = [
   },
   { path: '/portfolio', 
     name: 'Portfolio', 
-    meta: { title: 'Portfolio' },
+    meta: { title: 'Adams Portfolio' },
     component: portfolio 
   }
 ]
