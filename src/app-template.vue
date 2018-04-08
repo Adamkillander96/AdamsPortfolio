@@ -1,5 +1,5 @@
 <template>
-<div id="app-content" class="background-adam ">
+<div id="app-content">
   
 <appNav></appNav>
 <appBody></appBody>
@@ -28,13 +28,7 @@ export default {
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 body { font-family: 'Raleway', sans-serif; color: white; }
 
-
-.background-adam { 
-    background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
-}
-
-a.router-link-active, 
-a.active { pointer-events: none; }
+.background-adam {  background-image: linear-gradient(to right, #243949 0%, #517fa4 100%); }
 
 .adam-blue       { background-color: #6294cf !important }
 .adam-blue-text  { color: #6294cf !important }
