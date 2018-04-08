@@ -34,7 +34,7 @@
         </a>
       </div>
       <component v-bind:is="currentTabComponent"></component>
-      <div class="p-2">
+      <div class="p-2 text-right">
         <b-btn class="border-0" @click="hideModal" exact>Close</b-btn>
       </div>
     </b-modal>
