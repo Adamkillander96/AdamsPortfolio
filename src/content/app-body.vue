@@ -2,8 +2,8 @@
 
 <div id="app-body" class="bodyComponent">
   <b-container fluid class="p-5">
-    <b-row class="p-5">
-      <b-col lg="6" class="text-right">
+    <b-row>
+      <b-col sm="12" lg="6" class="text-right">
         <h1 class="display-3">{{ $t('appHead') }}</h1>
         <p class="lead">{{ $t('appDescr') }}</p>
       </b-col>

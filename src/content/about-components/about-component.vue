@@ -48,8 +48,6 @@
     </b-col>
   </b-row>
   <mapComponent></mapComponent>
-  <feedbackComponent></feedbackComponent>
-
 </b-container>
 
 </template>
