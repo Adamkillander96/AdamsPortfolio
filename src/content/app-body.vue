@@ -7,8 +7,8 @@
         <h1 class="display-3">{{ $t('appHead') }}</h1>
         <p class="lead">{{ $t('appDescr') }}</p>
       </b-col>
-      <b-col lg="6">
-        <i class="fas fa-desktop fa-5x"></i>
+      <b-col sm="12" lg="6" class="text-lg-left text-sm-right text-right">
+        <i class="fas fa-folder-open fa-5x"></i>
       </b-col>
     </b-row>
   </b-container>

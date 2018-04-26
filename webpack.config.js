@@ -1,5 +1,6 @@
 var path = require('path')
 var webpack = require('webpack')
+const PrerenderSpaPlugin = require('prerender-spa-plugin')
 const ExtractTextPlugin = require("extract-text-webpack-plugin")
 
 module.exports = {
@@ -67,6 +68,7 @@ module.exports = {
     hints: false
   },
   plugins: [new ExtractTextPlugin("main.css")],
+
   devtool: '#eval-source-map'
 }
 
@@ -87,6 +89,12 @@ if (process.env.NODE_ENV === 'production') {
     }),
     new webpack.LoaderOptionsPlugin({
       minimize: true
-    })
+    }),
+    new PrerenderSpaPlugin(
+      // Path to compiled app
+      path.join(__dirname, 'dist'),
+      // List of endpoints you wish to prerender
+      [ '/', '/about_me', '/portfolio' ]
+    )
   ])
 }

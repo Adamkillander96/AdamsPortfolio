@@ -2,21 +2,21 @@
 
 <b-container fluid id="skillcomponent">
   <b-row class="bg-coding">
-    <b-col lg="4" class="p-0">
+    <b-col md="12" lg="4" class="p-0">
       <b-link class="transparent-btn px-3 w-100 h-100 border-0 bg-transparent" v-b-modal.skillModal v-on:click="currentTab = 'SEO'"></b-link>
       <SkillSEO></SkillSEO>
     </b-col>
-    <b-col lg="4" class="p-0">
+    <b-col sm="6" md="6" lg="4" class="p-0">
       <b-link class="transparent-btn px-3 w-100 h-100 border-0 bg-transparent" v-b-modal.skillModal v-on:click="currentTab = 'WEB'"></b-link>
       <SkillWeb></SkillWeb>
     </b-col>
-    <b-col lg="4" class="p-0">
+    <b-col sm="6" md="6" lg="4" class="p-0">
       <b-link class="transparent-btn px-3 w-100 h-100 border-0 bg-transparent" v-b-modal.skillModal v-on:click="currentTab = 'SUP'"></b-link>
       <SkillSupport></SkillSupport> 
     </b-col>
   </b-row>
   <transition name="component-fade" mode="out-in">
-    <b-modal ref="thymodal" id="skillModal" body-class="p-0" class="p-0" centered hide-header hide-footer>
+    <b-modal ref="thymodal" id="skillModal" body-class="p-0" class="p-0" hide-header hide-footer>
       <div class="bg-dark nav nav-justified">
         <a 
         v-html="tab.icon" 
