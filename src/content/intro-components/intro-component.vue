@@ -8,7 +8,7 @@
       </b-col>
       <b-col sm="12" md="6" class="text-center">
         <i class="fas fa-user-astronaut fa-5x"></i>
-        <vue-typer class="d-block" text='Hejsan, jag är en webbutvecklare & SEO-specialist från Halmstad.'></vue-typer>
+        <vue-typer class="d-block" text="$t('helloMsg')"></vue-typer>
       </b-col>
     </b-row>
   </b-container>
@@ -20,8 +20,6 @@
 // ES6
 import { VueTyper } from 'vue-typer'
 
-
-
 export default {
   name: 'intro',
   components: {   
@@ -32,10 +30,12 @@ export default {
       en: { 
         appHead: 'Adams Portfolio',
         appDescr: 'A simple SPA for my portfolio',
+        helloMsg : 'Text',
       },  
       se: { 
         appHead: 'Adams Portfolio',
         appDescr: 'En enkel SPA för min portfolio',
+        helloMsg : 'Sve Text',
       }
     }
   }
