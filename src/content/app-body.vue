@@ -1,21 +1,8 @@
 <template>
 
-<div id="app-body" class="bodyComponent">
-  <b-container fluid class="p-5">
-    <b-row>
-      <b-col sm="12" lg="6" class="text-right">
-        <h1 class="display-3">{{ $t('appHead') }}</h1>
-        <p class="lead">{{ $t('appDescr') }}</p>
-      </b-col>
-      <b-col sm="12" lg="6" class="text-lg-left text-sm-right text-right">
-        <i class="fas fa-folder-open fa-5x"></i>
-      </b-col>
-    </b-row>
-  </b-container>
   <transition name="component-fade" mode="out-in">
-    <router-view></router-view>
+    <router-view id="app-body" class="bodyComponent"></router-view>
   </transition>
-</div>
 
 </template>
 
@@ -23,18 +10,6 @@
 
 export default {
   name: 'app-body',
-  i18n: {
-    messages: {
-      en: { 
-        appHead: 'Adams Portfolio',
-        appDescr: 'A simple SPA for my portfolio',
-      },  
-      se: { 
-        appHead: 'Adams Portfolio',
-        appDescr: 'En enkel SPA för min portfolio',
-      }
-    }
-  }
 }
 
 </script>

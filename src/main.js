@@ -19,13 +19,19 @@ Vue.use(VueGoogleMaps, {
 
 import template from './app-template.vue'
 
+import intro from './content/intro-components/intro-component.vue'
 import home from './content/adam-components/skill-component.vue'
 import about from './content/about-components/about-component.vue'
 import portfolio from './content/portfolio-components/portfolio-component.vue'
 
 const routes = [
   { path: '/', 
-    name: 'Home', 
+    name: 'Intro', 
+    meta: { title: 'Webbutvecklare & SEO-specialst' }, 
+    component: intro,
+    },
+  { path: '/overview', 
+    name: 'Overview', 
     meta: { title: 'Adams Portfolio' }, 
     component: home,
     },
@@ -57,7 +63,7 @@ const messages = {
     appName: 'Adams Portfolio',
     lang: 'Language',
     
-    home: 'Home',
+    overview: 'Overview',
     portfolio: 'Portfolio',
     aboutme: 'About me',
 
@@ -80,7 +86,7 @@ const messages = {
     appName: 'Adams Portfolio',
     lang: 'Språk',
     
-    home: 'Hem',
+    overview: 'Översikt',
     portfolio: 'Portfolio',
     aboutme: 'Om mig',
 

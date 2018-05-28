@@ -27,7 +27,21 @@ export default {
 <style>
 body { font-family: 'Raleway', sans-serif; color: white; }
 
-.background-adam {  background-image: linear-gradient(to right, #243949 0%, #517fa4 100%); }
+.background-adam {  
+    background-image: linear-gradient(to right, #333 0%, #6f42c1 100%);
+}
+
+.coolSvgBg {
+    background-color: #6294cf;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 900'%3E%3Cpath fill='%2389afdc' d='M0 504 0 899 1600 899 1600 120z'/%3E%3Cpath fill='%23cf6262' d='M1600 567 1600 899 0 899 0 165z'/%3E%3Cpath fill='%23db8989' d='M0 680 0 899 1600 899 1600 300z'/%3E%3Cpath fill='%2379ce62' d='M1600 719 1600 899 0 899 0 353z'/%3E%3Cpath fill='%239ada8a' d='M0 788 0 899 1600 899 1600 625z'/%3E%3C/svg%3E");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+  /*background by SVGBackgrounds.com */
+}
+.bodyComponent {
+  height: calc(100vh - 223px);
+}
 
 .adam-blue       { background-color: #6294cf !important }
 .adam-blue-2nd   { background-color: #89afdc !important }
@@ -42,7 +56,7 @@ body { font-family: 'Raleway', sans-serif; color: white; }
 .adam-green      { background-color: #79ce62 !important }
 .adam-green-2nd  { background-color: #9ada8a !important }
 .adam-green-text { color: #79ce62 !important }
-.adam-turkos     { background-color: #62c1cf !important }
+.adam-turkos     { background-color: #35e0fa !important }
 .adam-turkos-2   { background-color: #4e9aa6 !important; }
 .adam-turkos-text{ color: #62c1cf !important }
 
@@ -85,6 +99,7 @@ nav a.nav-link {
 .bg-coding {
     background: url(./assets/codingImage.jpg) no-repeat fixed center;
     background-size: cover;
+    padding: 50px 0;
 }
 
 .col-overlay {
