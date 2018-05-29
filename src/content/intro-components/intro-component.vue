@@ -1,14 +1,14 @@
 <template>
 
 <b-container fluid class="p-5">
-    <b-row>
-      <b-col sm="12" md="6" class="text-center">
+    <b-row align-v="center" class="h-100">
+      <b-col sm="12" md="6" class="text-center justify-content-center">
         <h1 class="display-3">{{ $t('appHead') }}</h1>
         <p class="lead">{{ $t('appDescr') }}</p>
       </b-col>
-      <b-col sm="12" md="6" class="text-center">
-        <i class="fas fa-user-astronaut fa-5x"></i>
-        <vue-typer class="d-block" text="$t('helloMsg')"></vue-typer>
+      <b-col sm="12" md="6" class="text-center justify-content-center">
+        <i class="fas fa-user-astronaut fa-10x"></i>
+        <vue-typer class="d-block text-white" v-bind:text="$t('helloMsg')" :erase-on-complete='false'></vue-typer>
       </b-col>
     </b-row>
   </b-container>
@@ -30,12 +30,12 @@ export default {
       en: { 
         appHead: 'Adams Portfolio',
         appDescr: 'A simple SPA for my portfolio',
-        helloMsg : 'Text',
+        helloMsg : 'Hi, my name is Adam and I work as an SEO-specialist and web developer in Uppsala.',
       },  
       se: { 
         appHead: 'Adams Portfolio',
         appDescr: 'En enkel SPA för min portfolio',
-        helloMsg : 'Sve Text',
+        helloMsg : 'Hejsan, mitt namn är Adam och jag jobbar som SEO-specialist och webbutvecklare i Uppsala.',
       }
     }
   }

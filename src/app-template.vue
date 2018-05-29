@@ -40,7 +40,7 @@ body { font-family: 'Raleway', sans-serif; color: white; }
   /*background by SVGBackgrounds.com */
 }
 .bodyComponent {
-  height: calc(100vh - 223px);
+  min-height: calc(100vh - 223px);
 }
 
 .adam-blue       { background-color: #6294cf !important }
