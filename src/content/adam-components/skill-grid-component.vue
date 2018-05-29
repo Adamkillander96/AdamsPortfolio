@@ -61,7 +61,7 @@ export default {
           gridSkillTitle2: 'Coding',
           gridSkillDescr2: 'Easy to read & manageable code is my bread & butter',
           gridSkillTitle6: 'Couch potato',
-          gridSkillDescr6: 'I play all FPS games & sci-fi movies',
+          gridSkillDescr6: 'I play all FPS games & watch sci-fi movies all night',
           gridSkillTitle7: 'Analysis',
           gridSkillDescr7: 'Fixed on detail & improvement work', },
       se: {
@@ -70,7 +70,7 @@ export default {
           gridSkillTitle2: 'Kodning',
           gridSkillDescr2: 'Lättläst & hanterbar kod är mitt bread & butter',
           gridSkillTitle6: 'Soffpotatis',
-          gridSkillDescr6: 'Spelar alla FPS spel & sci-fi filmer',
+          gridSkillDescr6: 'Spelar alla FPS spel & tittar på sci-fi filmer',
           gridSkillTitle7: 'Analys',
           gridSkillDescr7: 'Fixerad på detalj & förbättringsarbete', 
         }

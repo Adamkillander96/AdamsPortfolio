@@ -42,6 +42,27 @@ body { font-family: 'Raleway', sans-serif; color: white; }
 .bodyComponent {
   min-height: calc(100vh - 223px);
 }
+.bodyComponent > #introSection {
+  min-height: calc(100vh - 319px);
+}
+
+/* SCSS */
+.vue-typer {
+  font-family: "Raleway", sans-serif;
+  font-size: 120%;
+}
+.vue-typer .custom.char {
+  color: #fff;
+}
+.vue-typer .custom.char.selected {
+  background: black;
+}
+.vue-typer .custom.caret.selecting {
+  background: none;
+}
+.vue-typer .custom.caret.erasing {
+  background: none;
+}
 
 .adam-blue       { background-color: #6294cf !important }
 .adam-blue-2nd   { background-color: #89afdc !important }
