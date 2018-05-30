@@ -1,7 +1,7 @@
 <template>
 
 <b-container fluid id="about-me">
-  <b-row class="position-relative col-overlay">
+  <b-row class="position-relative wired-bg">
     <b-col sm="4" class="p-0">
       <ul class="nav justified tabPanelNav flex-row nav-pills nav-fill">
         <li v-b-toggle.accordion1 class="nav-item p-4 adam-red">

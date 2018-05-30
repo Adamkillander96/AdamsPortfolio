@@ -1,7 +1,7 @@
 <template>
 
 <b-container fluid id="skillcomponent">
-  <b-row class="bg-coding">
+  <b-row class="wired-bg py-5">
     <b-col md="12" lg="4" class="p-0">
       <b-link class="transparent-btn px-3 w-100 h-100 border-0 bg-transparent" v-b-modal.skillModal v-on:click="currentTab = 'SEO'"></b-link>
       <SkillSEO></SkillSEO>
