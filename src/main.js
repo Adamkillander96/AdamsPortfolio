@@ -32,12 +32,12 @@ const routes = [
     },
   { path: '/overview', 
     name: 'Overview', 
-    meta: { title: 'Adams Portfolio' }, 
+    meta: { title: 'Översikt' }, 
     component: home,
     },
   { path: '/about_me', 
     name: 'About me', 
-    meta: { title: 'About Adam' },
+    meta: { title: 'Om Adam' },
     component: about 
   },
   { path: '/portfolio', 
@@ -118,5 +118,5 @@ const app = new Vue({
   i18n,
   el: '#app-content',
   router,
-  render: h => h(template),
+  render: h => h(template)
 })
