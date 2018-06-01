@@ -108,11 +108,12 @@ const messages = {
 }
 
 const i18n = new VueI18n({
-  locale: 'se',
+  locale: navigator.language,
   fallbackLocale: 'se',
   messages,
   silentTranslationWarn: true
 })
+
 
 const app = new Vue({
   i18n,
