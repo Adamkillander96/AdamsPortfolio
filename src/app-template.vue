@@ -27,6 +27,10 @@
 </div>
 </template>
 
+<style lang="scss">
+  @import './assets/app-custom.scss';
+</style>
+
 <script>
 import appBody from './content/app-body.vue'
 import appFooter from './content/app-footer.vue'
@@ -38,6 +42,10 @@ export default {
           intro: true,
           activeItem: 'se'
       }
+  },
+  created() {
+    const html = document.documentElement // returns the html tag
+    html.setAttribute('lang', 'se')
   },
   methods: {
     setLanguage (val) {
