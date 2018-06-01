@@ -1,17 +1,17 @@
 <template>
-<div id="app-content" v-bind:class="{ 'wired-bg': intro }">
+<div id="app-content" v-bind:class="{ 'wired-bg': $route.path === '/' }">
   
 <nav id="app-nav" role="navigation">
 <b-navbar toggleable="md" type="dark" class="">
 
-  <b-navbar-toggle target="nav_collapse"><i class="fas fa-times"></i></b-navbar-toggle>
+  <b-navbar-toggle target="nav_collapse"><i class="fas fa-bars fa-lg"></i></b-navbar-toggle>
   <b-navbar-brand v-on:click="intro = true" to="/" value="/" exact for="appName">{{ $t('appName') }}</b-navbar-brand>
   <b-collapse is-nav id="nav_collapse">
 
     <b-navbar-nav class="mr-auto">
-      <b-nav-item v-on:click="intro = false" class="px-3" to="/overview" exact>{{ $t('overview') }} <i class="fas fa-home"></i></b-nav-item>
-      <b-nav-item v-on:click="intro = false" class="px-3" to="/about_me" exact>{{ $t('aboutme') }} <i class="fas fa-street-view"></i></b-nav-item>
-      <b-nav-item v-on:click="intro = false" class="px-3" to="/portfolio" exact>{{ $t('portfolio') }} <i class="fas fa-briefcase"></i></b-nav-item>
+      <b-nav-item class="px-3" to="/overview" exact>{{ $t('overview') }} <i class="fas fa-home"></i></b-nav-item>
+      <b-nav-item class="px-3" to="/about_me" exact>{{ $t('aboutme') }} <i class="fas fa-street-view"></i></b-nav-item>
+      <b-nav-item class="px-3" to="/portfolio" exact>{{ $t('portfolio') }} <i class="fas fa-briefcase"></i></b-nav-item>
       <b-nav-item-dropdown id="nav7_ddown" v-bind:text="$t('lang')" extra-toggle-classes="nav-link-custom" class="px-3" right>
         <b-dropdown-item @click="setLanguage('se'); setActive('se')" :class="{ active: isActive('se'), 'adam-green': isActive('se') }" id="Swedish" type="language" class="">Swedish <i class="far fa-flag"></i></b-dropdown-item>
         <b-dropdown-item @click="setLanguage('en'); setActive('en')" :class="{ active: isActive('en'), 'adam-green': isActive('en') }" id="English" type="language" class="">English <i class="far fa-flag"></i></b-dropdown-item>
@@ -22,7 +22,7 @@
 </b-navbar>
 </nav>
 <appBody></appBody>
-<appFooter></appFooter>
+<appFooter v-bind:class="{ 'hide': $route.path === '/' }></appFooter>
 
 </div>
 </template>
@@ -60,7 +60,9 @@ export default {
 
 <style>
 body { font-family: 'Raleway', sans-serif; color: white; }
-
+body > div {
+    transition: 0.5s ease-in-out
+}
 .background-adam {  
     background-image: linear-gradient(to right, #403651 0%, #6f42c1 100%);
 }
@@ -80,8 +82,8 @@ body { font-family: 'Raleway', sans-serif; color: white; }
     background by SVGBackgrounds.com 
 } */
 
-.bodyComponent > #introSection {
-  min-height: calc(100vh - 330px);
+#introSection {
+  min-height: calc(100vh - 152px);
 }
 
 /* SCSS */
@@ -130,8 +132,8 @@ body { font-family: 'Raleway', sans-serif; color: white; }
     outline: none !important;
 }
 
-.component-fade-enter-active, .component-fade-leave-active { transition: opacity .2s ease-in-out; }
-.component-fade-enter, .component-fade-leave-to { opacity: 0; }
+.fade-enter-active, .fade-leave-active { transition: opacity .2s ease-in-out; }
+.fade-enter, .fade-leave-to { opacity: 0; }
 
 .col-lg-4 svg { transition: 0.1s ease-in-out }
 
@@ -147,14 +149,6 @@ body { font-family: 'Raleway', sans-serif; color: white; }
 }
 nav a.nav-link {
     text-shadow: 0 1px 6px rgba(0, 0, 0, 0.25);
-}
-.navbar-toggler[aria-expanded="true"] > svg {
-    transform: rotate(0deg);
-    transition: 0.1s;
-}
-.navbar-toggler[aria-expanded="false"] > svg {
-    transform: rotate(45deg);
-    transition: 0.1s;
 }
 
 .btn-outline-light:hover { color: #212529 !important; }
@@ -182,13 +176,6 @@ picture > img {
 
 .tabPanelContent > *[id*=accordion]              { height: 100%;    }
 .tabPanelContent > *[id*=accordion] > .card-body { height: inherit; }
-
-#npsvalue {
-    top: 0;
-    left: 0;
-    line-height: 300px;
-    font-size: 2.5rem;
-}
 
 @media (max-width: 1100px) { .tabPanelNav span   { display:none; } }
 @media (max-width: 1100px) { .tabPanelNav li a   { text-align: center; } }

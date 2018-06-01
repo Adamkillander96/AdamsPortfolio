@@ -1,6 +1,6 @@
 <template>
 
-  <transition name="component-fade" mode="out-in">
+  <transition name="fade" mode="out-in">
     <router-view id="app-body" class="bodyComponent"></router-view>
   </transition>
 

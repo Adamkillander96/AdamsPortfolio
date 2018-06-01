@@ -55,6 +55,8 @@ import SkillSEODetails from './qua-components/skill-component-seo-details.vue'
 import SkillWebDetails from './qua-components/skill-component-web-details.vue'
 import SkillSupportDetails from './qua-components/skill-component-support-details.vue'
 
+import thyComponent from './skill-component.vue'
+
 export default {
   name: 'skill-overview',
   data () {

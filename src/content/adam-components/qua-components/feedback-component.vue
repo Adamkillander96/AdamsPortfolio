@@ -3,13 +3,7 @@
   <h2 class="adam-blue-text">{{ $t('myNPS') }} <i class="fas fa-tachometer-alt"></i></h2>
   <span class="text-dark">{{ $t('desNPS') }}</span>
   <div class="p-4 text-dark position-relative" >
-    <svg :width="size" :height="size" xmlns="http://www.w3.org/2000/svg" style="transform: rotate(-90deg);">
-      <g>
-        <title>NPS graph</title>
-        <circle :style="style" id="circle" class="circle_animation" :r="radius" :cy="size/2" :cx="size/2" :stroke-width="stroke" stroke="#79ce62" fill="none" />
-      </g>
-      </svg>
-    <span id="npsvalue" class="d-block position-absolute w-100 h-100 mx-auto">{{perc}}</span>
+    <span id="npsvalue" class="nps-value">71</span>
   </div>
 </div>
 </template>
@@ -19,27 +13,6 @@
 export default {
   name: 'feedback-component',
   components: {
-  },
-  data () {
-    return {
-      perc: 75,
-      radius: 120,
-      stroke: 24
-    }
-  },
-  computed: {
-  	size () {
-    	return this.radius * 2 + this.stroke
-    },
-  	perimeter () {
-    	return Math.round(Math.PI * this.radius * 2)
-    },
-  	style () {
-    	return {
-      	'stroke-dashoffset': this.perimeter - this.perc / 100 * this.perimeter,
-        'stroke-dasharray': this.perimeter,
-      }
-    }
   },
   i18n: {
     messages: {

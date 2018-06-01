@@ -47,7 +47,6 @@
       </ul>
     </b-col>
   </b-row>
-  <mapComponent></mapComponent>
 </b-container>
 
 </template>
