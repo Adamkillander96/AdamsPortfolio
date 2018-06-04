@@ -24,7 +24,6 @@
       </div>
     </b-col>
   </b-row>
-
 </template>
 
 <script>
