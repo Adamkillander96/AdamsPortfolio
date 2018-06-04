@@ -1,8 +1,8 @@
 <template>
   <b-row>
     <b-col md="8">
-      <div id="demo">
-        <h1>Latest Vue.js Commits</h1>
+      <div class="githubCommits">
+        <h3>Latest Vue.js Commits</h3>
           <template v-for="branch in branches">
             <input type="radio"
             v-bind:key="branch.id"
@@ -12,7 +12,7 @@
             v-model="currentBranch">
           <label :for="branch" v-bind:key="branch.id">{{ branch }}</label>
         </template>
-        <p>vuejs/vue@{{ currentBranch }}</p>
+        <p>Adam Killander/AdamsPortfolio@{{ currentBranch }}</p>
         <ul>
           <li v-for="record in commits" v-bind:key="record.id">
             <a :href="record.html_url" target="_blank" class="commit">{{ record.sha.slice(0, 7) }}</a>
@@ -31,12 +31,14 @@
 
 var apiURL = 'https://api.github.com/repos/Adamkillander96/AdamsPortfolio/commits?per_page=3&sha='
 
-var demo = new Vue({
-  el: '#demo',
-  data: {
-    branches: ['master', 'dev'],
-    currentBranch: 'master',
-    commits: null
+export default {
+  name: 'update-component',
+  data() { 
+    return {
+      branches: ['master', 'docs'],
+      currentBranch: 'master',
+      commits: null
+    }
   },
   created: function () {
     this.fetchData()
@@ -64,11 +66,7 @@ var demo = new Vue({
       }
       xhr.send()
     }
-  }
-})
-
-export default {
-  name: 'update-component',
+  },
   i18n: {
     messages: {
       en: { 

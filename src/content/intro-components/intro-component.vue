@@ -1,7 +1,7 @@
 <template>
 
 <b-container fluid class="p-5 h-100">
-    <b-row id="introSection">
+    <b-row class="introSection">
       <b-col lg="12" align-self="center" class="text-center">
         <h1 class="display-3">{{ $t('appHead') }}</h1>
         <p class="lead">{{ $t('appDescr') }}</p>
