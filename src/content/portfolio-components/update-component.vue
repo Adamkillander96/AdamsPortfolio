@@ -2,7 +2,7 @@
   <b-row>
     <b-col md="8">
       <div class="githubCommits">
-        <h3>Latest Vue.js Commits</h3>
+        <h3>{{ $t('updateTitle') }}</h3>
           <template v-for="branch in branches">
             <input type="radio"
             v-bind:key="branch.id"
@@ -15,10 +15,9 @@
         <p>Adam Killander/AdamsPortfolio@{{ currentBranch }}</p>
         <ul>
           <li v-for="record in commits" v-bind:key="record.id">
-            <a :href="record.html_url" target="_blank" class="commit">{{ record.sha.slice(0, 7) }}</a>
-            - <span class="message">{{ record.commit.message | truncate }}</span><br>
-      by <span class="author"><a :href="record.author.html_url" target="_blank">{{ record.commit.author.name }}</a></span>
-      at <span class="date">{{ record.commit.author.date | formatDate }}</span>
+            <a :href="record.html_url" target="_blank" class="commit">{{ record.sha.slice(0, 7) }}</a>- <span class="message">{{ record.commit.message | truncate }}</span><br>
+            {{ $t('by') }} <span class="author"><a :href="record.author.html_url" target="_blank">{{ record.commit.author.name }}</a></span>
+            {{ $t('at') }} <span class="date">{{ record.commit.author.date | formatDate }}</span>
           </li>
         </ul>
       </div>
@@ -69,10 +68,14 @@ export default {
   i18n: {
     messages: {
       en: { 
-
+        updateTitle: 'Latest Portfolio commits',
+        by: 'by',
+        at: 'at'
         },
       se: { 
-
+        updateTitle: 'Senaste Portfolio commits',
+        by: 'Av',
+        at: 'vid'
       }
     }
   }

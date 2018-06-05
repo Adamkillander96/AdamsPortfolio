@@ -40,7 +40,7 @@ export default {
   data() {
       return {
           intro: true,
-          activeItem: 'se'
+          activeItem: 'se',
       }
   },
   created() {

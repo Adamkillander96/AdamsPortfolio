@@ -2,12 +2,9 @@
 <b-row>
   <b-col md="4" class="p-4"
     v-for="website in website" 
-    v-bind:key="website.id"
-    v-bind:title="website.title"
-    v-bind:description="website.description"
-    v-bind:thumbnail="website.thumbnail">
-    <h3>{{website.title}}</h3>
-    <span>{{website.description}}</span>
+    v-bind:key="website.id">
+    <h3 v-t="website.content[0]"></h3>
+    <span v-t="website.content[1]"></span>
     <img v-bind:src="website.thumbnail">
   </b-col>
 </b-row>
@@ -21,24 +18,25 @@ export default {
   data() {
     return {
       website: [
-        { title: 'Example 1', description: 'text1', thumbnail: 'ex1' }, 
-        { title: 'Example 2', description: 'text2', thumbnail: 'ex2' }, 
-        { title: 'Example 3', description: 'text3', thumbnail: 'ex3' }, 
+        { content: this.$t('website1'), thumbnail: 'ex1' },
+        { content: this.$t('website2'), thumbnail: 'ex2' },
+        { content: this.$t('website3'), thumbnail: 'ex3' },
       ]
     }
   },
   i18n: {
     messages: {
       en: { 
-        title1: 'Internal links',
-        description1: 'External links', 
+        website1: [ 'Title 1', 'Description 1' ],
+        website2: [ 'Title 2', 'Description 2' ],
+        website3: [ 'Title 3', 'Description 3' ],
       },
       se: { 
-        title1: 'Interna länkar',
-        description1: 'Externa länkar',
+        website1: [ 'Titel 1', 'Beskrivning 1' ],
+        website2: [ 'Titel 2', 'Beskrivning 2' ],
+        website3: [ 'Titel 3', 'Beskrivning 3' ],
       }
     }
   }
 }
-
 </script>
