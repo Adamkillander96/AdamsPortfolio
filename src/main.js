@@ -35,7 +35,7 @@ const routes = [
     meta: { title: 'Översikt' }, 
     component: home,
     },
-  { path: '/about_me', 
+  { path: '/about-me', 
     name: 'About me', 
     meta: { title: 'Om Adam' },
     component: about 

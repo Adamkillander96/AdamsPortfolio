@@ -21,7 +21,7 @@ export default {
         { content: this.$t('website1'), thumbnail: 'ex1' },
         { content: this.$t('website2'), thumbnail: 'ex2' },
         { content: this.$t('website3'), thumbnail: 'ex3' },
-      ]
+      ] 
     }
   },
   i18n: {
