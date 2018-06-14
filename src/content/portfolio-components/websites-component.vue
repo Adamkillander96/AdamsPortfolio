@@ -1,6 +1,7 @@
 <template>
 <b-row>
   <b-col md="4" class="p-4"
+
     v-for="website in website" 
     v-bind:key="website.id">
     <h3 v-t="website.content[0]"></h3>

@@ -6,6 +6,7 @@ import * as VueGoogleMaps from 'vue2-google-maps'
 
 import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap-vue/dist/bootstrap-vue.css"
+import firebase from "firebase";
 
 Vue.use(BootstrapVue)
 Vue.use(VueRouter)
@@ -16,6 +17,16 @@ Vue.use(VueGoogleMaps, {
     libraries: 'places', 
   }
 })
+
+var config = {
+  apiKey: "AIzaSyC8-pEYvficR--TWkhyVdrbABWVNw2t26g",
+  authDomain: "adams-portfolio-60dce.firebaseapp.com",
+  databaseURL: "https://adams-portfolio-60dce.firebaseio.com",
+  projectId: "adams-portfolio-60dce",
+  storageBucket: "adams-portfolio-60dce.appspot.com",
+  messagingSenderId: "5138442952"
+};
+firebase.initializeApp(config);
 
 import template from './app-template.vue'
 

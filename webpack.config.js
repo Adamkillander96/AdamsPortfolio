@@ -22,6 +22,9 @@ module.exports = {
           }
         }
       },
+      { 
+        test: /\.html$/, 
+        use: 'vue-template-loader' },
       {
         test: /\.js$/,
         loader: 'babel-loader',
