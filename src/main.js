@@ -2,31 +2,13 @@ import Vue from 'vue'
 import BootstrapVue from "bootstrap-vue"
 import VueRouter from 'vue-router'
 import VueI18n from 'vue-i18n'
-import * as VueGoogleMaps from 'vue2-google-maps'
 
 import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap-vue/dist/bootstrap-vue.css"
-import firebase from "firebase";
 
 Vue.use(BootstrapVue)
 Vue.use(VueRouter)
 Vue.use(VueI18n)
-Vue.use(VueGoogleMaps, {
-  load: {
-    key: 'AIzaSyBBwhltghmUqdrK9fgUGaVGHo6Xlw-KrTk',
-    libraries: 'places', 
-  }
-})
-
-var config = {
-  apiKey: "AIzaSyC8-pEYvficR--TWkhyVdrbABWVNw2t26g",
-  authDomain: "adams-portfolio-60dce.firebaseapp.com",
-  databaseURL: "https://adams-portfolio-60dce.firebaseio.com",
-  projectId: "adams-portfolio-60dce",
-  storageBucket: "adams-portfolio-60dce.appspot.com",
-  messagingSenderId: "5138442952"
-};
-firebase.initializeApp(config);
 
 import template from './app-template.vue'
 
@@ -38,20 +20,20 @@ import portfolio from './content/portfolio-components/portfolio-component.vue'
 const routes = [
   { path: '/', 
     name: 'Intro', 
-    meta: { title: 'Webbutvecklare & SEO-specialst' }, 
+    meta: { title: 'Frontend developer & SEO-specialist'}, 
     component: intro,
     },
-  { path: '/overview', 
+  { path: '/overview/', 
     name: 'Overview', 
-    meta: { title: 'Översikt' }, 
+    meta: { title: 'Overview' }, 
     component: home,
     },
-  { path: '/about-me', 
+  { path: '/about-me/', 
     name: 'About me', 
-    meta: { title: 'Om Adam' },
+    meta: { title: 'About Adam' },
     component: about 
   },
-  { path: '/portfolio', 
+  { path: '/portfolio/', 
     name: 'Portfolio', 
     meta: { title: 'Adams Portfolio' },
     component: portfolio 
@@ -85,7 +67,7 @@ const messages = {
     skillSeoDescr: 'I play by googles rules',
     skillSeoText: 'I started working at OnMedia because I wanted to develop my design and SEO skills. Before OnMedia, I could only build websites, but did not optimize them for Google and think about how users actually perceived the website.',
     
-    skillWebbTitle: 'Web developer',
+    skillWebbTitle: 'Frontend developer',
     skillWebbDescr: 'Some solve crosswords, I am learning new frameworks',
     skillWebbText: 'I am a hobby developer',
     
@@ -108,7 +90,7 @@ const messages = {
     skillSeoDescr: 'Jag spelar efter googles regler',
     skillSeoText: 'Jag började jobba på OnMedia för att jag ville utveckla mina design och SEO kunskaper. Innan OnMedia kunde jag bara bygga hemsidor, men inte optimisera för Google och tänka ett steg till i hur användarna faktiskt uppfattade hemsidan. ',
     
-    skillWebbTitle: 'Webbutvecklare',
+    skillWebbTitle: 'Frontend utvecklare',
     skillWebbDescr: 'En del löser korsord, jag lär mig nya ramverk',
     skillWebbText: 'Utveckling är min hobby',
     

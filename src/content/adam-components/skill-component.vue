@@ -92,12 +92,12 @@ export default {
     messages: {
       en: { 
         seo: 'SEO Specialist',
-        web: 'Web developer',
+        web: 'Frontend developer',
         sup: 'First-line Support',
         },
       se: { 
         seo: 'SEO Specialist',
-        web: 'Webbutvecklare',
+        web: 'Frontend utvecklare',
         sup: 'First-line Support',
       }
     }

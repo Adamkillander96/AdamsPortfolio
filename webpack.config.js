@@ -1,13 +1,13 @@
 var path = require('path')
 var webpack = require('webpack')
-const PrerenderSpaPlugin = require('prerender-spa-plugin')
+const PrerenderSPAPlugin = require('prerender-spa-plugin')
 const ExtractTextPlugin = require("extract-text-webpack-plugin")
 
 module.exports = {
   entry: './src/main.js',
   output: {
     path: path.resolve(__dirname, './dist'),
-    publicPath: '/dist/',
+    publicPath: '/',
     filename: 'build.js',
   },
   module: {
@@ -66,7 +66,9 @@ module.exports = {
   performance: {
     hints: false
   },
-  plugins: [new ExtractTextPlugin("main.css")],
+  plugins: [
+    new ExtractTextPlugin("main.css"),
+  ],
 
   devtool: '#eval-source-map'
 }
@@ -78,6 +80,13 @@ if (process.env.NODE_ENV === 'production') {
       'process.env': {
         NODE_ENV: '"production"'
       }
+    }),
+    new PrerenderSPAPlugin({
+      staticDir: path.join(__dirname, 'dist'),
+      routes: [ '/', '/overview', '/about-me', '/portfolio' ],
+    }),
+    new VueHtmlWebpackPlugin({
+      vue: true
     }),
     new webpack.optimize.UglifyJsPlugin({
       sourceMap: true,

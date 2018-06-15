@@ -118,11 +118,6 @@ nav a.nav-link {
 
 .btn-outline-light:hover { color: #212529 !important; }
 
-.bg-coding {
-    background: url(./assets/codingImage.jpg) no-repeat fixed center;
-    background-size: cover;
-    padding: 50px 0;
-}
 .border-bottom {
   border-bottom-width: 3px !important;
 }
