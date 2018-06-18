@@ -2,6 +2,7 @@ import Vue from 'vue'
 import BootstrapVue from "bootstrap-vue"
 import VueRouter from 'vue-router'
 import VueI18n from 'vue-i18n'
+import Meta from 'vue-meta'
 
 import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap-vue/dist/bootstrap-vue.css"
@@ -9,6 +10,7 @@ import "bootstrap-vue/dist/bootstrap-vue.css"
 Vue.use(BootstrapVue)
 Vue.use(VueRouter)
 Vue.use(VueI18n)
+Vue.use(Meta)
 
 import template from './app-template.vue'
 
@@ -18,24 +20,24 @@ import about from './content/about-components/about-component.vue'
 import portfolio from './content/portfolio-components/portfolio-component.vue'
 
 const routes = [
-  { path: '/', 
+  { 
+    path: '/', 
     name: 'Intro', 
-    meta: { title: 'Frontend developer & SEO-specialist'}, 
-    component: intro,
-    },
-  { path: '/overview/', 
-    name: 'Overview', 
-    meta: { title: 'Overview' }, 
-    component: home,
-    },
-  { path: '/about-me/', 
-    name: 'About me', 
-    meta: { title: 'About Adam' },
-    component: about 
+    component: intro ,
   },
-  { path: '/portfolio/', 
+  { 
+    path: '/översikt/',
+    name: 'Overview', 
+    component: home
+  },
+  { 
+    path: '/om-mig/', 
+    name: 'About me', 
+    component: about
+  },
+  {
+    path: '/portfolio/', 
     name: 'Portfolio', 
-    meta: { title: 'Adams Portfolio' },
     component: portfolio 
   }
 ]
@@ -44,6 +46,7 @@ const router = new VueRouter({
   routes,
   mode: 'history',
 })
+
 
 router.beforeEach((to, from, next) => {
   document.title = to.meta.title

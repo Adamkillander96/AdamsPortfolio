@@ -61,12 +61,45 @@ export default {
   name: 'skill-overview',
   data () {
     return {
+      author: 'Adam Killander',
+      title: 'En översikt av mitt arbetsliv',
+      description: 'Jag arbetar som SEO-specialist och Frontend utvecklare. Det började dock med att jag jobbade som first-line support där jag fick intresse för Frontend utveckling.',
+      img: '',
       currentTab: 'SEO',
       tabs: [
         { name: 'SEO', id: 'seoTab', icon: '<i class="far fa-chart-bar fa-3x"></i>' }, 
         { name: 'WEB', id: 'webTab', icon: '<i class="fas fa-paint-brush fa-3x"></i>' }, 
         { name: 'SUP', id: 'supTab', icon: '<i class="fas fa-rocket fa-3x"></i>' }, 
       ]
+    }
+  },
+  metaInfo() {
+    return {
+      title: this.title,
+      meta: [
+        {vmid: 'description', name: 'description', content: this.description },
+        // Og
+        {vmid: 'og:title', property: 'og:title', content: this.title },
+        {vmid: 'og:site_name', property: 'og:site_name', content: this.author },
+        {vmid: 'og:type', property: 'og:type', content: 'website'},
+        {vmid: 'og:url', property: 'og:url', content: 'https://adamkillander.se/översikt/'},
+        {vmid: 'og:image', property: 'og:image', content: this.img },
+        {vmid: 'og:description', property: 'og:description', content: this.description },
+        // Twitter card
+        {vmid: 'twitter:card', name: 'twitter:card', content: 'summary'},
+        {vmid: 'twitter:site', name: 'twitter:site', content: 'https://adamkillander.se/översikt/'},
+        {vmid: 'twitter:title', name: 'twitter:title', content: this.title},
+        {vmid: 'twitter:description', name: 'twitter:description', content: this.description },
+        {vmid: 'twitter:creator', name: 'twitter:creator', content: '@adamkillander96'},
+        {vmid: 'twitter:image:src', name: 'twitter:image:src', content: this.img },
+        //Google
+        {vmid: 'name', itemprop: 'name', content: this.title},
+        {vmid: 'description', itemprop: 'description', content: this.description },
+        {vmid: 'image', itemprop: 'image', content: this.img }
+      ],
+      links: [
+        {rel: 'canonical', href: 'https://adamkillander.se/översikt/'}
+      ],
     }
   },
   computed: {

@@ -19,6 +19,12 @@
 
 export default {
   name: 'intro',
+  metaInfo: {
+    title: 'Frontend developer & SEO-specialist',
+    meta: [
+      { vmid: 'description', name: 'description', content: 'Sveriges skönaste frontend utvecklare som är grym på funktionsutveckling & älskar att skapa avancerade och användarvänliga lösningar.' }
+    ]
+  },
   i18n: {
     messages: {
       en: { 

@@ -2,12 +2,13 @@ var path = require('path')
 var webpack = require('webpack')
 const PrerenderSPAPlugin = require('prerender-spa-plugin')
 const ExtractTextPlugin = require("extract-text-webpack-plugin")
+const PuppeteerRenderer = PrerenderSPAPlugin.PuppeteerRenderer
 
 module.exports = {
   entry: './src/main.js',
   output: {
     path: path.resolve(__dirname, './dist'),
-    publicPath: '/',
+    publicPath: '/dist/',
     filename: 'build.js',
   },
   module: {
@@ -83,10 +84,8 @@ if (process.env.NODE_ENV === 'production') {
     }),
     new PrerenderSPAPlugin({
       staticDir: path.join(__dirname, 'dist'),
-      routes: [ '/', '/overview', '/about-me', '/portfolio' ],
-    }),
-    new VueHtmlWebpackPlugin({
-      vue: true
+      routes: [ '/', '/översikt', '/om-mig', '/portfolio' ],
+      renderer: new PuppeteerRenderer(),
     }),
     new webpack.optimize.UglifyJsPlugin({
       sourceMap: true,
@@ -96,6 +95,6 @@ if (process.env.NODE_ENV === 'production') {
     }),
     new webpack.LoaderOptionsPlugin({
       minimize: true
-    })
+    }),
   ])
 }
