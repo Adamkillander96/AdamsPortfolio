@@ -2,12 +2,12 @@
 
 <b-container fluid class="p-5 h-100">
     <b-row class="introSection">
-      <b-col lg="12" align-self="center" class="text-center">
+      <b-col lg="12" class="text-center">
         <h1 class="display-3">{{ $t('appHead') }}</h1>
         <p class="lead">{{ $t('appDescr') }}</p>
         <i class="fas fa-user-astronaut fa-10x"></i>
       </b-col>
-      <b-col lg="12" align-self="top" class="text-center">
+      <b-col lg="12" class="text-center">
         <span class="lead">{{$t('helloMsg')}}</span>
       </b-col>
     </b-row>
@@ -19,12 +19,6 @@
 
 export default {
   name: 'intro',
-  metaInfo: {
-    title: 'Frontend developer & SEO-specialist',
-    meta: [
-      { vmid: 'description', name: 'description', content: 'Sveriges skönaste frontend utvecklare som är grym på funktionsutveckling & älskar att skapa avancerade och användarvänliga lösningar.' }
-    ]
-  },
   i18n: {
     messages: {
       en: { 

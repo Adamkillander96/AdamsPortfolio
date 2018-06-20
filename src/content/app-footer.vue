@@ -6,7 +6,7 @@
           <div class="nav-link-container">
             <h6 class="mb-1 border-bottom border-info">{{ $t('linkInternal') }}</h6>
             <b-button-group vertical>
-              <b-link class="rounded-0 text-light d-block p-2 w-100" to="/översikt/" exact>{{ $t('overview') }} <i class="fas fa-home"></i></b-link>
+              <b-link class="rounded-0 text-light d-block p-2 w-100" to="/oversikt/" exact>{{ $t('overview') }} <i class="fas fa-home"></i></b-link>
               <b-link class="rounded-0 text-light d-block p-2 w-100" to="/om-mig/" exact>{{ $t('aboutme') }} <i class="fas fa-street-view"></i></b-link>
               <b-link class="rounded-0 text-light d-block p-2 w-100" to="/portfolio/" exact>{{ $t('portfolio') }} <i class="fas fa-briefcase"></i></b-link>
             </b-button-group>

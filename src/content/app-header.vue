@@ -7,7 +7,7 @@
   <b-collapse is-nav id="nav_collapse">
 
     <b-navbar-nav class="mr-auto">
-      <b-nav-item class="px-3" to="/översikt/" exact>{{ $t('overview') }} <i class="fas fa-home"></i></b-nav-item>
+      <b-nav-item class="px-3" to="/oversikt/" exact>{{ $t('overview') }} <i class="fas fa-home"></i></b-nav-item>
       <b-nav-item class="px-3" to="/om-mig/" exact>{{ $t('aboutme') }} <i class="fas fa-street-view"></i></b-nav-item>
       <b-nav-item class="px-3" to="/portfolio/" exact>{{ $t('portfolio') }} <i class="fas fa-briefcase"></i></b-nav-item>
       <b-nav-item-dropdown id="nav7_ddown" v-bind:text="$t('lang')" extra-toggle-classes="nav-link-custom" class="px-3" right>

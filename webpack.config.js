@@ -84,7 +84,7 @@ if (process.env.NODE_ENV === 'production') {
     }),
     new PrerenderSPAPlugin({
       staticDir: path.join(__dirname, 'dist'),
-      routes: [ '/', '/översikt', '/om-mig', '/portfolio' ],
+      routes: [ '/', '/oversikt', '/om-mig', '/portfolio' ],
       renderer: new PuppeteerRenderer(),
     }),
     new webpack.optimize.UglifyJsPlugin({

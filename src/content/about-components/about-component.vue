@@ -38,7 +38,7 @@
   </b-row>
   <b-row class="bg pb-4">
     <b-col lg="6" class="p-4">
-      <picture><img class="d-block mx-auto rounded-circle" src="adam-img.jpg"></picture>
+      <picture><img class="d-block mx-auto rounded-circle" src="https://adamkillander.se/adam-img.jpg"></picture>
     </b-col>
     <b-col lg="6" class="p-4">
       <h2 class="adam-turkos-text">{{ $t('aboutMeTitle') }} <i class="fab fa-sistrix"></i></h2>
