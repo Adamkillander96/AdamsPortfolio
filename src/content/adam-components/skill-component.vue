@@ -1,6 +1,31 @@
 <template>
 
 <b-container fluid id="skillcomponent">
+  <b-row class="p-4 wired-bg text-center">
+    <b-col md="12"><h1>{{ $t('overviewH1') }}</h1></b-col>
+  </b-row>
+  <b-row class="p-0 text-center">
+    <b-col sm="12" class="p-0">
+      <h2 class="text-light py-4">Languages, SAAS, Softwares, Frameworks & libraries</h2>
+      <div class="d-inline-block w-100 text-light">
+        <ul class="nav nav-fill h4 p-0 m-0">
+          <li class="nav-item nav-link rounded-0"><i class="fab fa-html5 fa-fw"></i></li>
+          <li class="nav-item nav-link rounded-0"><i class="fab fa-css3-alt fa-fw"></i></li>
+          <li class="nav-item nav-link rounded-0"><i class="fab fa-sass fa-fw"></i></li>
+          <li class="nav-item nav-link rounded-0"><i class="fab fa-js-square fa-fw"></i></li>
+          <li class="nav-item nav-link rounded-0"><i class="fab fa-php fa-fw"></i></li>
+          <li class="nav-item nav-link rounded-0"><i class="fab fa-vuejs fa-fw"></i></li>
+          <li class="nav-item nav-link rounded-0"><i class="fab fa-angular fa-fw"></i></li>
+          <li class="nav-item nav-link rounded-0"><i class="fab fa-node fa-fw"></i></li>
+          <li class="nav-item nav-link rounded-0">Bootstrap 4</li>
+          <li class="nav-item nav-link rounded-0"><i class="fab fa-npm fa-fw"></i></li>
+          <li class="nav-item nav-link rounded-0"><i class="fab fa-wordpress fa-fw"></i></li>
+          <li class="nav-item nav-link rounded-0"><i class="fab fa-chrome fa-fw"></i></li>
+          <li class="nav-item nav-link rounded-0"><i class="fab fa-hotjar fa-fw"></i></li>
+        </ul>
+      </div>
+    </b-col>
+  </b-row>
   <b-row class="wired-bg py-5">
     <b-col md="12" lg="4" class="p-0">
       <b-link class="transparent-btn px-3 w-100 h-100 border-0 bg-transparent" v-b-modal.skillModal v-on:click="currentTab = 'SEO'"></b-link>

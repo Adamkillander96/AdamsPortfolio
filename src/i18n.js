@@ -10,6 +10,8 @@ export const messages = {
       today: 'today',
       since: 'since',
   
+      overviewH1: 'A summary of my workplaces',
+
       skillSeoTitle: 'SEO Specialist',
       skillSeoDescr: 'I play by googles rules',
       skillSeoText: 'I started working at OnMedia because I wanted to develop my design and SEO skills. Before OnMedia, I could only build websites, but did not optimize them for Google and think about how users actually perceived the website.',
@@ -33,6 +35,8 @@ export const messages = {
       today: 'idag',
       since: 'sedan',
   
+      overviewH1: 'En översikt av mina arbetsplatser',
+
       skillSeoTitle: 'SEO Specialist',
       skillSeoDescr: 'Jag spelar efter googles regler',
       skillSeoText: 'Jag började jobba på OnMedia för att jag ville utveckla mina design och SEO kunskaper. Innan OnMedia kunde jag bara bygga hemsidor, men inte optimisera för Google och tänka ett steg till i hur användarna faktiskt uppfattade hemsidan. ',

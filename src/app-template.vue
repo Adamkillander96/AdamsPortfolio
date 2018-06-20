@@ -50,27 +50,9 @@ body > div {
 .introSection {
   min-height: calc(100vh - 152px);
 }
-
 /* SCSS */
-.vue-typer {
-  font-family: "Raleway", sans-serif;
-  font-size: 120%;
-}
-.vue-typer .custom.char {
-  color: #fff;
-}
-.vue-typer .custom.char.selected {
-  background: black;
-}
-.vue-typer .custom.caret.selecting {
-  background: none;
-}
-.vue-typer .custom.caret.erasing {
-  background: none;
-}
-.vue-typer .idle, 
-.vue-typer .typing {
-  background-color: transparent;
+div>ul>li>svg {
+    font-size: 1.5em !important;
 }
 
 .adam-blue       { background-color: #6294cf !important }

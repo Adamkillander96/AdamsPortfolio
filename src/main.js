@@ -52,5 +52,6 @@ const app = new Vue({
   i18n,
   el: '#app-content',
   router,
+  template: '',
   render: h => h(template)
 })

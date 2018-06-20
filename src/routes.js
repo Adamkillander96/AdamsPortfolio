@@ -4,28 +4,20 @@ import about from './content/about-components/about-component.vue'
 import portfolio from './content/portfolio-components/portfolio-component.vue'
 
 export const metaText = {
-  author: 'Adam Killander',
-  title: 'Frontend utvecklarportfolio för Adam Killander',
-  description: 'Det här är min Frontend utvecklarportfolio där jag har lite text om mig själv & även några hemsidor/funktioner jag har byggt.',
-  img: '',
-}
-export const metaText2 = {
-  author: 'Adam Killander',
-  title: 'En översikt av mitt arbetsliv',
-  description: 'Jag arbetar som SEO-specialist & Frontend utvecklare. Det började dock med att jag jobbade som first-line support där jag fick intresse för Frontend utveckling.',
-  img: '',
-}
-export const metaText3 = {
-  author: 'Adam Killander',
-  title: 'Om mig som person',
-  description: 'När jag inte bygger funktioner & lär mig nya ramverk så gillar jag bland annat att träna, spela spel & kolla film.',
-  img: '',
-}
-export const metaText4 = {
-  author: 'Adam Killander',
-  title: 'Frontend utvecklarportfolio',
-  description: 'Här är min Frontend utvecklarportfolio där jag har tagit fram hemsidor, funktioner & wireframes jag har codat.',
-  img: '',
+    author: 'Adam Killander',
+    title: [
+      'Frontend utvecklarportfolio för Adam Killander', 
+      'En översikt av mitt arbetsliv', 
+      'Om mig som person',
+      'Frontend utvecklarportfolio'
+    ],
+    description: [
+      'Det här är min Frontend utvecklarportfolio där jag har lite text om mig själv & även några hemsidor/funktioner jag har byggt.', 
+      'Jag arbetar som SEO-specialist & Frontend utvecklare. Det började dock med att jag jobbade som first-line support där jag fick intresse för Frontend utveckling.',
+      'När jag inte bygger funktioner & lär mig nya ramverk så gillar jag bland annat att träna, spela spel & kolla film.',
+      'Här är min Frontend utvecklarportfolio där jag har tagit fram hemsidor, funktioner & wireframes jag har codat.'
+    ],
+    img: ['','','',''],
 }
 
 export const routes = [
@@ -33,28 +25,28 @@ export const routes = [
     name: 'Intro', 
     component: intro ,
     meta: {
-      title: metaText.title,
+      title: metaText.title[0],
       metaTags: [ 
         {charset: 'utf-8' },
-        {name: 'description', content: metaText.description },
+        {name: 'description', content: metaText.description[0]},
         // Og
-        {property: 'og:title', content: metaText.title },
-        {property: 'og:site_name', content: metaText.author },
+        {property: 'og:title', content: metaText.title[0]},
+        {property: 'og:site_name', content: metaText.author},
         {property: 'og:type', content: 'website'},
         {property: 'og:url', content: 'https://adamkillander.se'},
-        {property: 'og:image', content: metaText.img },
-        {property: 'og:description', content: metaText.description },
+        {property: 'og:image', content: metaText.img[0]},
+        {property: 'og:description', content: metaText.description[0]},
         // Twitter card
         {name: 'twitter:card', content: 'summary'},
         {name: 'twitter:site', content: 'https://adamkillander.se'},
-        {name: 'twitter:title', content: metaText.title},
-        {name: 'twitter:description', content: metaText.description },
+        {name: 'twitter:title', content: metaText.title[0]},
+        {name: 'twitter:description', content: metaText.description[0]},
         {name: 'twitter:creator', content: '@adamkillander96'},
-        {name: 'twitter:image:src', content: metaText.img },
+        {name: 'twitter:image:src', content: metaText.img[0]},
         //Google
-        {itemprop: 'name', content: metaText.title},
-        {itemprop: 'description', content: metaText.description },
-        {itemprop: 'image', content: metaText.img }
+        {itemprop: 'name', content: metaText.title[0]},
+        {itemprop: 'description', content: metaText.description[0]},
+        {itemprop: 'image', content: metaText.img[0]}
       ]
     }
   },
@@ -63,28 +55,28 @@ export const routes = [
     name: 'Overview', 
     component: home,
     meta: {
-      title: metaText2.title,
+      title: metaText.title[1],
       metaTags: [ 
         {charset: 'utf-8' },
-        {name: 'description', content: metaText2.description },
+        {name: 'description', content: metaText.description[1]},
         // Og
-        {property: 'og:title', content: metaText2.title },
-        {property: 'og:site_name', content: metaText2.author },
+        {property: 'og:title', content: metaText.title[1]},
+        {property: 'og:site_name', content: metaText.author},
         {property: 'og:type', content: 'website'},
         {property: 'og:url', content: 'https://adamkillander.se'},
-        {property: 'og:image', content: metaText2.img },
-        {property: 'og:description', content: metaText2.description },
+        {property: 'og:image', content: metaText.img[1]},
+        {property: 'og:description', content: metaText.description[1]},
         // Twitter card
         {name: 'twitter:card', content: 'summary'},
         {name: 'twitter:site', content: 'https://adamkillander.se'},
-        {name: 'twitter:title', content: metaText2.title},
-        {name: 'twitter:description', content: metaText2.description },
+        {name: 'twitter:title', content: metaText.title[1]},
+        {name: 'twitter:description', content: metaText.description[1]},
         {name: 'twitter:creator', content: '@adamkillander96'},
-        {name: 'twitter:image:src', content: metaText2.img },
+        {name: 'twitter:image:src', content: metaText.img[1]},
         //Google
-        {itemprop: 'name', content: metaText2.title},
-        {itemprop: 'description', content: metaText2.description },
-        {itemprop: 'image', content: metaText2.img }
+        {itemprop: 'name', content: metaText.title[1]},
+        {itemprop: 'description', content: metaText.description[1]},
+        {itemprop: 'image', content: metaText.img[1]}
       ]
     }
   },
@@ -93,28 +85,28 @@ export const routes = [
     name: 'About me', 
     component: about,
     meta: {
-      title: metaText3.title,
+      title: metaText.title[2],
       metaTags: [ 
         {charset: 'utf-8' },
-        {name: 'description', content: metaText3.description },
+        {name: 'description', content: metaText.description[2]},
         // Og
-        {property: 'og:title', content: metaText3.title },
-        {property: 'og:site_name', content: metaText3.author },
+        {property: 'og:title', content: metaText.title[2]},
+        {property: 'og:site_name', content: metaText.author},
         {property: 'og:type', content: 'website'},
         {property: 'og:url', content: 'https://adamkillander.se'},
-        {property: 'og:image', content: metaText3.img },
-        {property: 'og:description', content: metaText3.description },
+        {property: 'og:image', content: metaText.img[2] },
+        {property: 'og:description', content: metaText.description[2]},
         // Twitter card
         {name: 'twitter:card', content: 'summary'},
         {name: 'twitter:site', content: 'https://adamkillander.se'},
-        {name: 'twitter:title', content: metaText3.title},
-        {name: 'twitter:description', content: metaText3.description },
+        {name: 'twitter:title', content: metaText.title[2]},
+        {name: 'twitter:description', content: metaText.description[2]},
         {name: 'twitter:creator', content: '@adamkillander96'},
-        {name: 'twitter:image:src', content: metaText3.img },
+        {name: 'twitter:image:src', content: metaText.img[2]},
         //Google
-        {itemprop: 'name', content: metaText3.title},
-        {itemprop: 'description', content: metaText3.description },
-        {itemprop: 'image', content: metaText3.img }
+        {itemprop: 'name', content: metaText.title[2]},
+        {itemprop: 'description', content: metaText.description[2]},
+        {itemprop: 'image', content: metaText.img[2]}
       ]
     }
   },
@@ -123,28 +115,28 @@ export const routes = [
     name: 'Portfolio', 
     component: portfolio,
     meta: {
-      title: metaText4.title,
+      title: metaText.title[3],
       metaTags: [ 
         {charset: 'utf-8' },
-        {name: 'description', content: metaText4.description },
+        {name: 'description', content: metaText.description[3]},
         // Og
-        {property: 'og:title', content: metaText4.title },
-        {property: 'og:site_name', content: metaText4.author },
+        {property: 'og:title', content: metaText.title[3]},
+        {property: 'og:site_name', content: metaText.author},
         {property: 'og:type', content: 'website'},
         {property: 'og:url', content: 'https://adamkillander.se'},
-        {property: 'og:image', content: metaText4.img },
-        {property: 'og:description', content: metaText4.description },
+        {property: 'og:image', content: metaText.img[3]},
+        {property: 'og:description', content: metaText.description[3]},
         // Twitter card
         {name: 'twitter:card', content: 'summary'},
         {name: 'twitter:site', content: 'https://adamkillander.se'},
-        {name: 'twitter:title', content: metaText4.title},
-        {name: 'twitter:description', content: metaText4.description },
+        {name: 'twitter:title', content: metaText.title[3]},
+        {name: 'twitter:description', content: metaText.description[3]},
         {name: 'twitter:creator', content: '@adamkillander96'},
-        {name: 'twitter:image:src', content: metaText4.img },
+        {name: 'twitter:image:src', content: metaText.img[3]},
         //Google
-        {itemprop: 'name', content: metaText4.title},
-        {itemprop: 'description', content: metaText4.description },
-        {itemprop: 'image', content: metaText4.img }
+        {itemprop: 'name', content: metaText.title[3]},
+        {itemprop: 'description', content: metaText.description[3]},
+        {itemprop: 'image', content: metaText.img[3]}
       ]
     }
   }
