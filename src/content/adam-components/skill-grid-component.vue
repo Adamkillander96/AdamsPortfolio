@@ -23,6 +23,17 @@
     <i class="fas fa-code fa-8x"></i>
    </div>
   </b-col>
+  <b-col lg="6" class="wired-bg py-2 rounded-right">
+    <b-row id="iconsdawg" class="nav nav-fill h-100 h4 p-0 m-0 d-flex align-items-stretch">
+      <b-col cols="4"
+        v-html="icons.icon" 
+        v-for="icons in icons" 
+        v-bind:key="icons.name" 
+        v-bind:id="icons.id"
+        class="text-center">
+      </b-col>
+    </b-row>
+  </b-col>
   <b-col lg="6" class="p-0" >
    <div class="rounded-0 p-5 text-center text-light">
     <div class="container">
@@ -53,6 +64,24 @@
 
 export default {
   name: 'skill-grid-component',
+  data () {
+    return {
+      icons: [
+        { icon: '<i class="fab fa-html5 fa-fw h-100"></i>' }, 
+        { icon: '<i class="fab fa-css3-alt fa-fw h-100"></i>' }, 
+        { icon: '<i class="fab fa-sass fa-fw h-100"></i>' },  
+        { icon: '<i class="fab fa-js-square fa-fw h-100"></i>' },   
+        { icon: '<i class="fab fa-vuejs fa-fw h-100"></i>' },  
+        { icon: '<i class="fab fa-angular fa-fw h-100"></i>' },  
+        { icon: '<i class="fab fa-node fa-fw h-100"></i>' },  
+        { icon: 'Bootstrap 4' },  
+        { icon: '<i class="fab fa-npm fa-fw h-100"></i>' },  
+        { icon: '<i class="fab fa-wordpress fa-fw h-100"></i>' },  
+        { icon: '<i class="fab fa-chrome fa-fw h-100"></i>' },  
+        { icon: '<i class="fab fa-hotjar fa-fw h-100"></i>' },  
+      ]
+    }
+  },
   i18n: {
     messages: {
       en: { 

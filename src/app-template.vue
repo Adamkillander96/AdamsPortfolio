@@ -51,8 +51,9 @@ body > div {
   min-height: calc(100vh - 152px);
 }
 /* SCSS */
-div>ul>li>svg {
-    font-size: 1.5em !important;
+#iconsdawg .svg-inline--fa.fa-fw {
+  width: auto;
+  max-width: 50px;
 }
 
 .adam-blue       { background-color: #6294cf !important }

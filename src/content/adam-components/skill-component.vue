@@ -7,23 +7,7 @@
   <b-row class="p-0 text-center">
     <b-col sm="12" class="p-0">
       <h2 class="text-light py-4">Languages, SAAS, Softwares, Frameworks & libraries</h2>
-      <div class="d-inline-block w-100 text-light">
-        <ul class="nav nav-fill h4 p-0 m-0">
-          <li class="nav-item nav-link rounded-0"><i class="fab fa-html5 fa-fw"></i></li>
-          <li class="nav-item nav-link rounded-0"><i class="fab fa-css3-alt fa-fw"></i></li>
-          <li class="nav-item nav-link rounded-0"><i class="fab fa-sass fa-fw"></i></li>
-          <li class="nav-item nav-link rounded-0"><i class="fab fa-js-square fa-fw"></i></li>
-          <li class="nav-item nav-link rounded-0"><i class="fab fa-php fa-fw"></i></li>
-          <li class="nav-item nav-link rounded-0"><i class="fab fa-vuejs fa-fw"></i></li>
-          <li class="nav-item nav-link rounded-0"><i class="fab fa-angular fa-fw"></i></li>
-          <li class="nav-item nav-link rounded-0"><i class="fab fa-node fa-fw"></i></li>
-          <li class="nav-item nav-link rounded-0">Bootstrap 4</li>
-          <li class="nav-item nav-link rounded-0"><i class="fab fa-npm fa-fw"></i></li>
-          <li class="nav-item nav-link rounded-0"><i class="fab fa-wordpress fa-fw"></i></li>
-          <li class="nav-item nav-link rounded-0"><i class="fab fa-chrome fa-fw"></i></li>
-          <li class="nav-item nav-link rounded-0"><i class="fab fa-hotjar fa-fw"></i></li>
-        </ul>
-      </div>
+      <p class="lead">Klicka på </p>
     </b-col>
   </b-row>
   <b-row class="wired-bg py-5">
