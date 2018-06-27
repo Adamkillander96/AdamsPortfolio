@@ -23,14 +23,14 @@
     <i class="fas fa-code fa-8x"></i>
    </div>
   </b-col>
-  <b-col lg="6" class="wired-bg py-2 rounded-right">
+  <b-col lg="6" class="py-2 rounded-right">
     <b-row id="iconsdawg" class="nav nav-fill h-100 h4 p-0 m-0 d-flex align-items-stretch">
       <b-col cols="4"
         v-html="icons.icon" 
         v-for="icons in icons" 
         v-bind:key="icons.name" 
         v-bind:id="icons.id"
-        class="text-center">
+        class="text-center fa-2x">
       </b-col>
     </b-row>
   </b-col>

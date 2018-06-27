@@ -5,7 +5,7 @@ import VueI18n from 'vue-i18n'
 import {messages} from './i18n'
 import {routes} from './routes'
 
-import "bootstrap/dist/css/bootstrap.min.css"
+import "bootstrap/dist/css/bootstrap.css"
 import "bootstrap-vue/dist/bootstrap-vue.css"
 
 Vue.use(BootstrapVue)
@@ -41,12 +41,18 @@ router.beforeEach((to, from, next) => {
   next();
 });
 
+const navlang = {
+  preflang: navigator.languages[1],
+}
+
 const i18n = new VueI18n({
-  locale: navigator.language,
+  locale: navlang.preflang,
   fallbackLocale: 'se',
   messages,
   silentTranslationWarn: true
 })
+
+console.log(navigator.languages)
 
 const app = new Vue({
   i18n,

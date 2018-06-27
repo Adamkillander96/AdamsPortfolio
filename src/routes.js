@@ -21,13 +21,15 @@ export const metaText = {
 }
 
 export const routes = [
+  { path: '/overview', redirect: '/oversikt' },
+  { path: '/översikt', redirect: '/oversikt' },
+  { path: '/about-me', redirect: '/om-mig' },
   { path: '/', 
     name: 'Intro', 
     component: intro ,
     meta: {
       title: metaText.title[0],
       metaTags: [ 
-        {charset: 'utf-8' },
         {name: 'description', content: metaText.description[0]},
         // Og
         {property: 'og:title', content: metaText.title[0]},
@@ -57,7 +59,6 @@ export const routes = [
     meta: {
       title: metaText.title[1],
       metaTags: [ 
-        {charset: 'utf-8' },
         {name: 'description', content: metaText.description[1]},
         // Og
         {property: 'og:title', content: metaText.title[1]},
@@ -87,7 +88,6 @@ export const routes = [
     meta: {
       title: metaText.title[2],
       metaTags: [ 
-        {charset: 'utf-8' },
         {name: 'description', content: metaText.description[2]},
         // Og
         {property: 'og:title', content: metaText.title[2]},
@@ -117,7 +117,6 @@ export const routes = [
     meta: {
       title: metaText.title[3],
       metaTags: [ 
-        {charset: 'utf-8' },
         {name: 'description', content: metaText.description[3]},
         // Og
         {property: 'og:title', content: metaText.title[3]},

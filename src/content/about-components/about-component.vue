@@ -3,34 +3,34 @@
 <b-container fluid id="about-me">
   <b-row class="position-relative wired-bg">
     <b-col sm="4" class="p-0">
-      <ul class="nav justified tabPanelNav flex-row nav-pills nav-fill">
-        <li v-b-toggle.accordion1 class="nav-item p-4 adam-red">
-          <a class="nav-link nav-link text-white"><span>{{ $t('whoAmI') }}</span> <i class="fas fa-question fa-3x align-middle"></i></a>
-        </li>
-        <li v-b-toggle.accordion2 class="nav-item p-4 adam-blue">
-          <a class="nav-link nav-link text-white"><span>{{ $t('currentMe') }}</span> <i class="fas fa-wrench fa-3x align-middle"></i></a>
-        </li>
-        <li v-b-toggle.accordion3 class="nav-item p-4 adam-green">
-          <a class="nav-link nav-link text-white"><span>{{ $t('perferedJob') }}</span> <i class="fas fa-trophy fa-3x align-middle"></i></a>
-        </li>
-      </ul>
+      <b-row id="accordionNav" class="nav nav-fill fa-2x h-100 w-100 m-0 text-center text-lg-left">
+        <b-col cols="4" sm="12" v-b-toggle.accordion1 class="p-4 bg-danger">
+          <a class="text-white ml-0 ml-lg-3"><i class="fas fa-question fa-fw align-middle"></i> <span class="d-none d-lg-inline-block">{{ $t('whoAmI') }}</span></a>
+        </b-col>
+        <b-col cols="4" sm="12" v-b-toggle.accordion2 class="p-4 bg-primary">
+          <a class="text-white ml-0 ml-lg-3"><i class="fas fa-wrench fa-fw align-middle"></i> <span class="d-none d-lg-inline-block">{{ $t('currentMe') }}</span></a>
+        </b-col>
+        <b-col cols="4" sm="12" v-b-toggle.accordion3 class="p-4 bg-success">
+          <a class="text-white ml-0 ml-lg-3"><i class="fas fa-trophy fa-fw align-middle"></i> <span class="d-none d-lg-inline-block">{{ $t('perferedJob') }}</span></a>
+        </b-col>
+      </b-row>
     </b-col>
     <b-col sm="8" class="p-0 tabPanelContent">
       <b-collapse id="accordion1" visible accordion="my-accordion">
         <b-card-body class="p-4">
-          <h4 class="adam-red-text">{{ $t('whoAmI') }}</h4>
+          <h4 class="text-danger">{{ $t('whoAmI') }}</h4>
           <p class="card-text" v-html="$t('whoAmIDesc')"></p>
         </b-card-body>
       </b-collapse>
       <b-collapse id="accordion2" accordion="my-accordion">
         <b-card-body class="p-4">
-          <h4 class="adam-blue-text">{{ $t('currentMe') }}</h4>
+          <h4 class="text-primary">{{ $t('currentMe') }}</h4>
           <p class="card-text" v-html="$t('currentMeDesc')"></p>
         </b-card-body>
       </b-collapse>
       <b-collapse id="accordion3" accordion="my-accordion">
         <b-card-body class="p-4">
-          <h4 class="adam-green-text">{{ $t('perferedJob') }}</h4>
+          <h4 class="text-success">{{ $t('perferedJob') }}</h4>
           <p class="card-text" v-html="$t('perferedJobDesc')"></p>
         </b-card-body>
       </b-collapse>
@@ -41,7 +41,7 @@
       <picture><img class="d-block mx-auto rounded-circle" src="https://adamkillander.se/adam-img.jpg"></picture>
     </b-col>
     <b-col lg="6" class="p-4">
-      <h2 class="adam-turkos-text">{{ $t('aboutMeTitle') }} <i class="fab fa-sistrix"></i></h2>
+      <h2 class="text-info">{{ $t('aboutMeTitle') }} <i class="fab fa-sistrix"></i></h2>
       <span>{{ $t('aboutMeDescr') }}</span>
       <ul class="p-4" v-html="$t('aboutMeComp')">
       </ul>
@@ -84,7 +84,7 @@ export default {
       se: { 
         aboutMeTitle: 'Med användaren i fokus',
         aboutMeDescr: 'Jag har under många år jobbat med grafisk design, frontend utveckling & att skapa användarvänliga produkter på en mängd olika sätt. Nedan listar jag de kompetenser & färdigheter jag har med mig som ett resultat av mitt arbete:',
-        currentMe: 'Mina arbetsuppgifter idag',
+        currentMe: 'Mitt jobb idag',
         currentMeDesc: `Jag jobbar på Onmedia's SEO & utvecklingsavdelning, på enheten för Design. I första hand ansvarar jag för design, funktionsutveckling & SEO på våra kunders hemsidor. Det kan t.ex. innebära att vidareutvecka existerande funktioner eller bygga helt nya, optimisera hastigheten och laddningstider. Jag skriver/bygger även en mäng av olika typer av rapporter och wireframes.
         <br><br>
         I våra större projekt arbetar vi i team där jag är länken mellan tekniken & kunden. Jag leder också några mindre projekt där jag sköter allt från analys, frontend utveckling & bearbetning av resultat & statistik.`,

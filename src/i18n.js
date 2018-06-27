@@ -1,5 +1,9 @@
 export const messages = {
     en: {
+      appHead: 'Adams Portfolio',
+      appDescr: 'A simple SPA for my portfolio',
+      helloMsg: 'Hi, my name is Adam and I work as an SEO-specialist and frontend developer in Uppsala, Sweden.',
+
       appName: 'Adams Portfolio',
       lang: 'Language',
       
@@ -22,9 +26,13 @@ export const messages = {
       
       skillSupportTitle: 'First-line Support',
       skillSupportDescr: 'Nice support both internally and externally',
-      skillSupportText: 'Text',
+      skillSupportText: 'My first "Real job" was at Quicksearch. I was introduced by a relative to take care of minor errands that no one had time for. However, my curiosity took over and I explored the systems we worked with and got the hang of it real quick. So fast in fact the CEO asked me after two weeks if I could start working full-time after just agreeing that I should work half-time.',
     },
     se: {
+      appHead: 'Adams Portfolio',
+      appDescr: 'En enkel SPA för min portfolio',
+      helloMsg: 'Hejsan, mitt namn är Adam och jag jobbar som SEO-specialist och frontend utvecklare i Uppsala, Sverige.',
+
       appName: 'Adams Portfolio',
       lang: 'Språk',
       
@@ -50,3 +58,4 @@ export const messages = {
       skillSupportText: 'Text',
   }
 }
+

@@ -1,5 +1,0 @@
-User-agent: *
-Disallow: /build.js
-Disallow: /main.css
-
-Sitemap: https://adamkillander.se/sitemap.xml
