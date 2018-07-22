@@ -2,7 +2,7 @@
 <div id="app-content">
 
 <appHeader v-bind:class="{ 'wired-bg ': $route.path == '/' }"></appHeader>
-<appBody></appBody>
+<appBody class="shadow"></appBody>
 <appFooter v-bind:class="{ 'd-none': $route.path === '/' }"></appFooter>
 
 </div>
@@ -43,32 +43,71 @@ body > div {
     background-image: linear-gradient(to right, #403651 0%, #6f42c1 100%);
 }
 .wired-bg {
-    background-color: #333333;
-    background-attachment: fixed;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='472' height='472' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%23403651' stroke-width='1.3'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%234e9aa6'%3E%3Ccircle cx='769' cy='229' r='7'/%3E%3Ccircle cx='539' cy='269' r='7'/%3E%3Ccircle cx='603' cy='493' r='7'/%3E%3Ccircle cx='731' cy='737' r='7'/%3E%3Ccircle cx='520' cy='660' r='7'/%3E%3Ccircle cx='309' cy='538' r='7'/%3E%3Ccircle cx='295' cy='764' r='7'/%3E%3Ccircle cx='40' cy='599' r='7'/%3E%3Ccircle cx='102' cy='382' r='7'/%3E%3Ccircle cx='127' cy='80' r='7'/%3E%3Ccircle cx='370' cy='105' r='7'/%3E%3Ccircle cx='578' cy='42' r='7'/%3E%3Ccircle cx='237' cy='261' r='7'/%3E%3Ccircle cx='390' cy='382' r='7'/%3E%3C/g%3E%3C/svg%3E");
+    background-color: #222;
 }
-/*
-#Swedish.active:before, a#Swedish.active:after{
+.hero-row > .row > *[class*='bg-light-']:after {
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: lighten;
     content: "";
     position: absolute;
-    background: #cfa762;
-    z-index: 1;
-}
-#Swedish.active:before {
+    left: 0;
+    top: 0;
+    width: 100%;
     height: 100%;
-    width: 20px;
-    margin-left: -10px;
-    left: 50%;
+    z-index: -1;
+    filter: opacity(0.5) grayscale(1);
+}
+.developer:after {
+    background-image: url(https://adamkillander.se/laptop.png);  
+}
+.code:after {
+    background-image: url(https://adamkillander.se/code.png);  
+}
+.game:after {
+    background-image: url(https://adamkillander.se/citiesskylinesimage.png);  
+}
+.analys:after {
+    background-image: url(https://adamkillander.se/analys.jpg);  
+}
+
+.developer:before   { border-left-color: #6193cf !important }
+.code:before        { border-right-color: #cf61b3 !important }
+.game:before        { border-left-color: #cfa762 !important }
+.analys:before      { border-right-color: #79ce62 !important }
+.hero-row:nth-child(odd) > .row > *[class*='bg-light-']:before {
+    content: "";
+    border-top: 20em solid transparent;
+    border-bottom: 0em solid transparent;
+    border-left: 3em solid ;
+    position: absolute;
+    left: 0;
     top: 0;
 }
-#Swedish.active:after {
-    height: 20px;
-    width: 100%;
-    margin-top: -10px;
-    left: 0;
-    top: 50%;
+.hero-row:nth-child(even) > .row > *[class*='bg-light-']:before {
+    content: "";
+    border-top: 20em solid transparent;
+    border-bottom: 0em solid transparent;
+    border-right: 3em solid ;
+    position: absolute;
+    right: 0;
+    top: 0;
 }
-*/
+
+a.nav-link {
+    position: relative;
+}
+a.nav-link:after {
+    content: "";
+    border-bottom: 3px solid #cf6161;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+}
+a.nav-link.active:after {
+    border-color: white;
+}
 
 .dropdown-menu.dropdown-menu-right > a {
     outline: none !important;
@@ -92,10 +131,6 @@ body > div {
 nav a.nav-link {
     text-shadow: 0 1px 6px rgba(0, 0, 0, 0.25);
 }
-.border-bottom {
-  border-bottom-width: 3px !important;
-}
-
 picture > img { 
     width: 100%;
     height: 100%;
@@ -107,5 +142,23 @@ picture > img {
 }
 #accordionNav div[aria-expanded="false"] { background-color: transparent !important; cursor: pointer; }
 #accordionNav div[aria-expanded="true"]  { pointer-events: none; }
+
+.introFun {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
+.rocketGuy {
+    width: 100%;
+}
+.rocketGuy svg {
+    transform: rotate(-43deg);
+}
+.custom-spin {
+    -webkit-animation: fa-spin 20s infinite linear;
+    animation: fa-spin 20s infinite linear;
+}
 
 </style>

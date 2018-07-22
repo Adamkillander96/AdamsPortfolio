@@ -7,7 +7,7 @@ import {routes} from './routes'
 
 import "bootstrap/dist/css/bootstrap.css"
 import "bootstrap-vue/dist/bootstrap-vue.css"
-
+import "./assets/all.js"
 Vue.use(BootstrapVue)
 Vue.use(VueRouter)
 Vue.use(VueI18n)
@@ -47,12 +47,10 @@ const navlang = {
 
 const i18n = new VueI18n({
   locale: navlang.preflang,
-  fallbackLocale: 'se',
+  fallbackLocale: 'sv',
   messages,
   silentTranslationWarn: true
 })
-
-console.log(navigator.languages)
 
 const app = new Vue({
   i18n,

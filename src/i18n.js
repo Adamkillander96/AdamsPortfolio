@@ -1,8 +1,8 @@
 export const messages = {
     en: {
-      appHead: 'Adams Portfolio',
-      appDescr: 'A simple SPA for my portfolio',
-      helloMsg: 'Hi, my name is Adam and I work as an SEO-specialist and frontend developer in Uppsala, Sweden.',
+      appHead: 'Adams <span class="text-success">Portfolio</span>',
+      appDescr: 'A simple SPA for my Frontend developer</span> portfolio',
+      helloMsg: 'Hi, my name is Adam and I work as an <span class="text-success">SEO-specialist</span> and <span class="text-success">Frontend developer</span> in Uppsala, Sweden.',
 
       appName: 'Adams Portfolio',
       lang: 'Language',
@@ -14,11 +14,12 @@ export const messages = {
       today: 'today',
       since: 'since',
   
-      overviewH1: 'A summary of my workplaces',
+      overviewH1: 'A summary of my workplaces & skills',
+      overviewDesc: 'Click on one of my job titles to read more!',
 
       skillSeoTitle: 'SEO Specialist',
       skillSeoDescr: 'I play by googles rules',
-      skillSeoText: 'I started working at OnMedia because I wanted to develop my design and SEO skills. Before OnMedia, I could only build websites, but did not optimize them for Google and think about how users actually perceived the website.',
+      skillSeoText: 'I started working at OnMedia because I wanted to develop my design & SEO skills. Before OnMedia, I could only build websites, but did not know how to optimize them for Google & think about how users actually perceived the website.',
       
       skillWebbTitle: 'Frontend developer',
       skillWebbDescr: 'Some solve crosswords, I am learning new frameworks',
@@ -28,10 +29,10 @@ export const messages = {
       skillSupportDescr: 'Nice support both internally and externally',
       skillSupportText: 'My first "Real job" was at Quicksearch. I was introduced by a relative to take care of minor errands that no one had time for. However, my curiosity took over and I explored the systems we worked with and got the hang of it real quick. So fast in fact the CEO asked me after two weeks if I could start working full-time after just agreeing that I should work half-time.',
     },
-    se: {
-      appHead: 'Adams Portfolio',
-      appDescr: 'En enkel SPA för min portfolio',
-      helloMsg: 'Hejsan, mitt namn är Adam och jag jobbar som SEO-specialist och frontend utvecklare i Uppsala, Sverige.',
+    sv: {
+      appHead: 'Adams <span class="text-success">Portfolio</span>',
+      appDescr: 'En enkel SPA för min Frontend utvecklarportfolio',
+      helloMsg: 'Hejsan, mitt namn är Adam och jag jobbar som <span class="text-success">SEO-specialist</span> och <span class="text-success">Frontend utvecklare</span> i Uppsala, Sverige.',
 
       appName: 'Adams Portfolio',
       lang: 'Språk',
@@ -43,7 +44,8 @@ export const messages = {
       today: 'idag',
       since: 'sedan',
   
-      overviewH1: 'En översikt av mina arbetsplatser',
+      overviewH1: 'En översikt av mina arbetsplatser & färdigheter',
+      overviewDesc: 'Klicka på mina arbetsroller nedanför för att läsa mer. ',
 
       skillSeoTitle: 'SEO Specialist',
       skillSeoDescr: 'Jag spelar efter googles regler',

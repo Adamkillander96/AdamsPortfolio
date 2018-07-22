@@ -32,7 +32,7 @@ export default {
         website2: [ 'Title 2', 'Description 2' ],
         website3: [ 'Title 3', 'Description 3' ],
       },
-      se: { 
+      sv: { 
         website1: [ 'Titel 1', 'Beskrivning 1' ],
         website2: [ 'Titel 2', 'Beskrivning 2' ],
         website3: [ 'Titel 3', 'Beskrivning 3' ],

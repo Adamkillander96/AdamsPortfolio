@@ -72,7 +72,7 @@ export default {
         by: 'by',
         at: 'at'
         },
-      se: { 
+      sv: { 
         updateTitle: 'Senaste Portfolio commits',
         by: 'Av',
         at: 'vid'

@@ -1,9 +1,9 @@
 <template>
 
 <b-container fluid id="about-me">
-  <b-row class="position-relative wired-bg">
+  <b-row class="position-relative">
     <b-col sm="4" class="p-0">
-      <b-row id="accordionNav" class="nav nav-fill fa-2x h-100 w-100 m-0 text-center text-lg-left">
+      <b-row id="accordionNav" class="nav nav-fill fa-2x h-100 w-100 m-0 bg-dark text-center text-lg-left">
         <b-col cols="4" sm="12" v-b-toggle.accordion1 class="p-4 bg-danger">
           <a class="text-white ml-0 ml-lg-3"><i class="fas fa-question fa-fw align-middle"></i> <span class="d-none d-lg-inline-block">{{ $t('whoAmI') }}</span></a>
         </b-col>
@@ -15,10 +15,10 @@
         </b-col>
       </b-row>
     </b-col>
-    <b-col sm="8" class="p-0 tabPanelContent">
+    <b-col sm="8" class="p-0 tabPanelContent bg-dark">
       <b-collapse id="accordion1" visible accordion="my-accordion">
         <b-card-body class="p-4">
-          <h4 class="text-danger">{{ $t('whoAmI') }}</h4>
+          <h3 class="text-danger">{{ $t('whoAmI') }}</h3>
           <p class="card-text" v-html="$t('whoAmIDesc')"></p>
         </b-card-body>
       </b-collapse>
@@ -38,7 +38,7 @@
   </b-row>
   <b-row class="bg pb-4">
     <b-col lg="6" class="p-4">
-      <picture><img class="d-block mx-auto rounded-circle" src="https://adamkillander.se/adam-img.jpg"></picture>
+      <picture><img class="d-block mx-auto rounded-circle" src="https://adamkillander.se/frontend-adam.jpg"></picture>
     </b-col>
     <b-col lg="6" class="p-4">
       <h2 class="text-info">{{ $t('aboutMeTitle') }} <i class="fab fa-sistrix"></i></h2>
@@ -81,11 +81,11 @@ export default {
         <br><br>I've been working on amazing companies in my years & it's hard to say what the perfect workplace is. As long as I develop myself, develop products & get the chance to work with something that creates value or difference for others, I'm home.<br><em>...a nice office is also nice!</em>`
         
         },
-      se: { 
+      sv: { 
         aboutMeTitle: 'Med användaren i fokus',
         aboutMeDescr: 'Jag har under många år jobbat med grafisk design, frontend utveckling & att skapa användarvänliga produkter på en mängd olika sätt. Nedan listar jag de kompetenser & färdigheter jag har med mig som ett resultat av mitt arbete:',
         currentMe: 'Mitt jobb idag',
-        currentMeDesc: `Jag jobbar på Onmedia's SEO & utvecklingsavdelning, på enheten för Design. I första hand ansvarar jag för design, funktionsutveckling & SEO på våra kunders hemsidor. Det kan t.ex. innebära att vidareutvecka existerande funktioner eller bygga helt nya, optimisera hastigheten och laddningstider. Jag skriver/bygger även en mäng av olika typer av rapporter och wireframes.
+        currentMeDesc: `Jag jobbar på Onmedia's SEO & utvecklingsavdelning, på enheten för Design. I första hand ansvarar jag för design, funktionsutveckling & SEO på våra kunders hemsidor. Det kan t.ex. innebära att vidareutvecka existerande funktioner eller bygga helt nya, optimisera hastigheten och laddningstider. Jag skriver/bygger även en mängd olika typer av rapporter & wireframes.
         <br><br>
         I våra större projekt arbetar vi i team där jag är länken mellan tekniken & kunden. Jag leder också några mindre projekt där jag sköter allt från analys, frontend utveckling & bearbetning av resultat & statistik.`,
         whoAmI: 'Vem är jag',
