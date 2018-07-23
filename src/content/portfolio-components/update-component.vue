@@ -1,25 +1,22 @@
 <template>
   <b-row>
-    <b-col md="8">
-      <div class="githubCommits">
-        <h3>{{ $t('updateTitle') }}</h3>
-          <template v-for="branch in branches">
-            <input type="radio"
-            v-bind:key="branch.id"
-            :id="branch"
-            :value="branch"
-            name="branch"
-            v-model="currentBranch">
-          <label :for="branch" v-bind:key="branch.id">{{ branch }}</label>
-        </template>
-        <p>Adam Killander/AdamsPortfolio@{{ currentBranch }}</p>
-        <ul>
-          <li v-for="record in commits" v-bind:key="record.id">
-            <a :href="record.html_url" target="_blank" class="commit">{{ record.sha.slice(0, 7) }}</a>- <span class="message">{{ record.commit.message | truncate }}</span><br>
-            {{ $t('by') }} <span class="author"><a :href="record.author.html_url" target="_blank">{{ record.commit.author.name }}</a></span>
-            {{ $t('at') }} <span class="date">{{ record.commit.author.date | formatDate }}</span>
-          </li>
-        </ul>
+    <b-col cols="12">
+      <h3 class="text-success">{{ $t('updateTitle') }}</h3>
+      <p>Adam Killander/AdamsPortfolio@ Master</p>
+      <hr class="border-success">
+    </b-col>
+    <b-col md="4" class="p-0 mb-4" v-for="record in commits" v-bind:key="record.id">
+      <div class="mx-4 bg-dark rounded">
+        <div class="card-body">
+          <a :href="record.html_url" target="_blank" class="h5 card-title">{{ record.sha.slice(0, 7) }}</a>
+          <span class="d-block lead">{{ record.commit.message | truncate }}</span>
+        </div>
+        <div class="card-footer">
+          <span class="d-block">
+            <a :href="record.author.html_url" target="_blank" class="text-success"><i class="fas fa-user-tag"></i> {{ record.commit.author.name }}</a>
+          </span>
+          <small class="text-secondary"><i class="far fa-calendar-alt"></i> {{ record.commit.author.date | formatDate }}</small>
+        </div>
       </div>
     </b-col>
   </b-row>
@@ -33,16 +30,13 @@ export default {
   name: 'update-component',
   data() { 
     return {
-      branches: ['master', 'docs'],
+      branches: ['master'],
       currentBranch: 'master',
       commits: null
     }
   },
   created: function () {
     this.fetchData()
-  },
-  watch: {
-    currentBranch: 'fetchData'
   },
   filters: {
     truncate: function (v) {
@@ -68,14 +62,10 @@ export default {
   i18n: {
     messages: {
       en: { 
-        updateTitle: 'Latest Portfolio commits',
-        by: 'by',
-        at: 'at'
+        updateTitle: 'Latest GitHub Portfolio commits',
         },
       sv: { 
-        updateTitle: 'Senaste Portfolio commits',
-        by: 'Av',
-        at: 'vid'
+        updateTitle: 'Senaste GitHub Portfolio commits',
       }
     }
   }

@@ -5,8 +5,6 @@ import VueI18n from 'vue-i18n'
 import {messages} from './i18n'
 import {routes} from './routes'
 
-import "bootstrap/dist/css/bootstrap.css"
-import "bootstrap-vue/dist/bootstrap-vue.css"
 import "./assets/all.js"
 Vue.use(BootstrapVue)
 Vue.use(VueRouter)

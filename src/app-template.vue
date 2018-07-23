@@ -1,15 +1,17 @@
 <template>
-<div id="app-content">
+<div id="app-content" v-cloak>
 
-<appHeader v-bind:class="{ 'wired-bg ': $route.path == '/' }"></appHeader>
-<appBody class="shadow"></appBody>
-<appFooter v-bind:class="{ 'd-none': $route.path === '/' }"></appFooter>
+<appHeader/>
+<appBody class="shadow" />
+<appFooter v-bind:class="{ 'd-none': $route.path === '/' }"/>
 
 </div>
 </template>
 
 <style lang="scss">
-  @import './assets/app-custom.scss';
+@import '/assets/app-custom.scss';
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+@import '/assets/app-custom-class.scss';
 </style>
 
 <script>
@@ -22,7 +24,6 @@ export default {
   data() {
       return {
           intro: true,
-          activeItem: 'se',
       }
   },
   components: {
@@ -56,19 +57,18 @@ body > div {
     width: 100%;
     height: 100%;
     z-index: -1;
-    filter: opacity(0.5) grayscale(1);
 }
 .developer:after {
-    background-image: url(https://adamkillander.se/laptop.png);  
+    background-image: url(https://adamkillander.se/images/laptop.png);  
 }
 .code:after {
-    background-image: url(https://adamkillander.se/code.png);  
+    background-image: url(https://adamkillander.se/images/code.png);  
 }
 .game:after {
-    background-image: url(https://adamkillander.se/citiesskylinesimage.png);  
+    background-image: url(https://adamkillander.se/images/citiesskylinesimage.png);  
 }
 .analys:after {
-    background-image: url(https://adamkillander.se/analys.jpg);  
+    background-image: url(https://adamkillander.se/images/analys.png);  
 }
 
 .developer:before   { border-left-color: #6193cf !important }
@@ -151,7 +151,12 @@ picture > img {
     width: 100%;
 }
 .rocketGuy {
-    width: 100%;
+    width: 85%;
+}
+@media (max-width: 992px) {
+    .rocketGuy {
+        width: 200%;
+    }
 }
 .rocketGuy svg {
     transform: rotate(-43deg);

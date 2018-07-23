@@ -1,14 +1,18 @@
 <template>
 
 <b-container fluid id="Portfolio-Component">
-  <b-row class="wired-bg">
-    <b-col class="p-4 text-center">
-      <h1>My websites, prototypes & fiddles</h1>
-      <span clsas="lead">text</span>
+  <b-row class="py-5 text-center">
+    <b-col md="12">
+      <h1>{{ $t('portfolioH1') }}</h1>
+      <p class="lead my-4">{{ $t('portfolioDesc') }}</p>
     </b-col>
   </b-row>
-  <websiteComponent />
-  <githubCommits />
+  <b-container class="pb-5">
+    <websiteComponent />
+  </b-container>
+  <b-container class="pb-5">
+    <githubCommits />
+  </b-container>
 </b-container>
 
 </template>

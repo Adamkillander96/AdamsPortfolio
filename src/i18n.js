@@ -1,16 +1,18 @@
 export const messages = {
     en: {
+      //Introsidan
       appHead: 'Adams <span class="text-success">Portfolio</span>',
       appDescr: 'A simple SPA for my Frontend developer</span> portfolio',
       helloMsg: 'Hi, my name is Adam and I work as an <span class="text-success">SEO-specialist</span> and <span class="text-success">Frontend developer</span> in Uppsala, Sweden.',
-
+      
+      //Header
       appName: 'Adams Portfolio',
       lang: 'Language',
-      
       overview: 'Overview',
       portfolio: 'Portfolio',
       aboutme: 'About me',
-  
+
+      //Översiktsidan
       today: 'today',
       since: 'since',
   
@@ -28,19 +30,26 @@ export const messages = {
       skillSupportTitle: 'First-line Support',
       skillSupportDescr: 'Nice support both internally and externally',
       skillSupportText: 'My first "Real job" was at Quicksearch. I was introduced by a relative to take care of minor errands that no one had time for. However, my curiosity took over and I explored the systems we worked with and got the hang of it real quick. So fast in fact the CEO asked me after two weeks if I could start working full-time after just agreeing that I should work half-time.',
+    
+      //Portfoliosidan
+      portfolioH1: 'My Frontend developer portfolio',
+      portfolioDesc: 'Here are some prototypes, fiddles & websites I have created. ',
+
     },
     sv: {
+      //Introsidan
       appHead: 'Adams <span class="text-success">Portfolio</span>',
       appDescr: 'En enkel SPA för min Frontend utvecklarportfolio',
       helloMsg: 'Hejsan, mitt namn är Adam och jag jobbar som <span class="text-success">SEO-specialist</span> och <span class="text-success">Frontend utvecklare</span> i Uppsala, Sverige.',
-
+      
+      //Header
       appName: 'Adams Portfolio',
       lang: 'Språk',
-      
       overview: 'Översikt',
       portfolio: 'Portfolio',
       aboutme: 'Om mig',
   
+      //Översiktsidan
       today: 'idag',
       since: 'sedan',
   
@@ -58,6 +67,10 @@ export const messages = {
       skillSupportTitle: 'First-line Support',
       skillSupportDescr: 'Trevligt stöd både internt & externt',
       skillSupportText: 'Text',
+
+      //Portfoliosidan
+      portfolioH1: 'Min Frontend utvecklarportfolio',
+      portfolioDesc: 'Här ser du flera av mina prototyper, fiddles & hemsidor jag har byggt.',
   }
 }
 
