@@ -8,18 +8,18 @@
     </b-col>
   </b-row>
   <b-container class="pb-5">
-    <websiteComponent />
+    <websites />
   </b-container>
   <b-container class="pb-5">
-    <githubCommits />
+    <commits />
   </b-container>
 </b-container>
 
 </template>
 
 <script>
-import websiteComponent from './websites-component.vue'
-import githubCommits from './update-component.vue'
+import websites from './items/fiddles.vue'
+import commits from './items/commits.vue'
 
 export default {
   name: 'portfolio-details',
@@ -28,8 +28,8 @@ export default {
     }
   },
   components: {
-    websiteComponent,
-    githubCommits
+    websites,
+    commits
   },
 }
 

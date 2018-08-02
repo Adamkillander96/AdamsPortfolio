@@ -7,9 +7,9 @@ export const metaText = {
     author: 'Adam Killander',
     title: [
       'Frontend utvecklarportfolio för Adam Killander', 
-      'En översikt av mitt arbetsliv', 
-      'Om mig som person',
-      'Frontend utvecklarportfolio'
+      'En översikt av mitt arbetsliv | Adam Killander', 
+      'Om mig som person | Adam Killander',
+      'Frontend utvecklarportfolio | Adam Killander'
     ],
     description: [
       'Det här är min Frontend utvecklarportfolio där jag har lite text om mig själv & även några hemsidor/funktioner jag har byggt.', 
@@ -31,7 +31,7 @@ export const routes = [
       title: metaText.title[0],
       metaTags: [ 
         {name: 'description', content: metaText.description[0]},
-        // Og
+        // OpenGraph
         {property: 'og:title', content: metaText.title[0]},
         {property: 'og:site_name', content: metaText.author},
         {property: 'og:type', content: 'website'},
@@ -45,7 +45,7 @@ export const routes = [
         {name: 'twitter:description', content: metaText.description[0]},
         {name: 'twitter:creator', content: '@adamkillander96'},
         {name: 'twitter:image:src', content: metaText.img[0]},
-        //Google
+        // Google
         {itemprop: 'name', content: metaText.title[0]},
         {itemprop: 'description', content: metaText.description[0]},
         {itemprop: 'image', content: metaText.img[0]}
@@ -60,7 +60,7 @@ export const routes = [
       title: metaText.title[1],
       metaTags: [ 
         {name: 'description', content: metaText.description[1]},
-        // Og
+        // OpenGraph
         {property: 'og:title', content: metaText.title[1]},
         {property: 'og:site_name', content: metaText.author},
         {property: 'og:type', content: 'website'},
@@ -74,7 +74,7 @@ export const routes = [
         {name: 'twitter:description', content: metaText.description[1]},
         {name: 'twitter:creator', content: '@adamkillander96'},
         {name: 'twitter:image:src', content: metaText.img[1]},
-        //Google
+        // Google
         {itemprop: 'name', content: metaText.title[1]},
         {itemprop: 'description', content: metaText.description[1]},
         {itemprop: 'image', content: metaText.img[1]}
@@ -89,7 +89,7 @@ export const routes = [
       title: metaText.title[2],
       metaTags: [ 
         {name: 'description', content: metaText.description[2]},
-        // Og
+        // OpenGraph
         {property: 'og:title', content: metaText.title[2]},
         {property: 'og:site_name', content: metaText.author},
         {property: 'og:type', content: 'website'},
@@ -103,7 +103,7 @@ export const routes = [
         {name: 'twitter:description', content: metaText.description[2]},
         {name: 'twitter:creator', content: '@adamkillander96'},
         {name: 'twitter:image:src', content: metaText.img[2]},
-        //Google
+        // Google
         {itemprop: 'name', content: metaText.title[2]},
         {itemprop: 'description', content: metaText.description[2]},
         {itemprop: 'image', content: metaText.img[2]}
@@ -118,7 +118,7 @@ export const routes = [
       title: metaText.title[3],
       metaTags: [ 
         {name: 'description', content: metaText.description[3]},
-        // Og
+        // OpenGraph
         {property: 'og:title', content: metaText.title[3]},
         {property: 'og:site_name', content: metaText.author},
         {property: 'og:type', content: 'website'},
@@ -132,7 +132,7 @@ export const routes = [
         {name: 'twitter:description', content: metaText.description[3]},
         {name: 'twitter:creator', content: '@adamkillander96'},
         {name: 'twitter:image:src', content: metaText.img[3]},
-        //Google
+        // Google
         {itemprop: 'name', content: metaText.title[3]},
         {itemprop: 'description', content: metaText.description[3]},
         {itemprop: 'image', content: metaText.img[3]}

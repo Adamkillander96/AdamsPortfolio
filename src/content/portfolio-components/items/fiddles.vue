@@ -5,17 +5,15 @@
       <p>{{ $t('titledesc') }}</p>
       <hr class="border-primary">
     </b-col>
-    <b-col md="4" class="p-0 mb-4" v-for="website in website" v-bind:key="website.id">
-      <div class="mx-4 bg-dark rounded">
-        <div class="card-body">
-          <h3 v-t="website.content[0]"></h3>
-          <span class="thisio" v-t="website.content[1]"></span>
-        </div>
-        <div class="card-footer">
-          <span class="d-block">
-            <a class="text-primary" target="_blank" v-bind:href="website.thumbnail" ><i class="fal fa-external-link-alt fa-fw"></i> Länk till prototypen</a>
-          </span>
-        </div>
+    <b-col md="4" class="mb-4" v-for="website in website" v-bind:key="website.id">
+      <div class="card-body bg-dark rounded-top">
+        <h3 v-t="website.content[0]"></h3>
+        <span class="thisio" v-t="website.content[1]"></span>
+      </div>
+      <div class="card-footer bg-light-dark rounded-bottom">
+        <span class="d-block">
+          <a class="text-primary" target="_blank" v-bind:href="website.thumbnail" ><i class="fal fa-external-link-alt fa-fw"></i> Länk till prototypen</a>
+        </span>
       </div>
     </b-col>
   </b-row>

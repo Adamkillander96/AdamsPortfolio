@@ -1,7 +1,14 @@
 <template>
 <b-navbar id="app-nav" toggleable="md" type="dark" role="navigation">
 
-  <b-navbar-toggle target="nav_collapse"><i class="fas fa-bars fa-lg"></i></b-navbar-toggle>
+  <b-navbar-toggle target="nav_collapse" class="p-0 m-0 border-0">
+    <div class="bar-icon collapsed">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </b-navbar-toggle>
   <b-navbar-brand v-on:click="intro = true" to="/" value="/" exact for="appName">{{ $t('appName') }}</b-navbar-brand>
   <b-collapse is-nav id="nav_collapse">
 
@@ -18,5 +25,10 @@
 <script>
 export default {
   name: 'app-header',
+  data() {
+    return {
+      toggleIcon: false
+    }
+  }
 }
 </script>
