@@ -165,5 +165,11 @@ picture > img {
     -webkit-animation: fa-spin 20s infinite linear;
     animation: fa-spin 20s infinite linear;
 }
-
+select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+select::-ms-expand {
+  display: none;
+}
 </style>
